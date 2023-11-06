@@ -1,0 +1,9 @@
+.header{
+    background-color: lavender;
+}
+
+.items_header {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
