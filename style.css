@@ -4,19 +4,15 @@ body {
 
 .header {
     background-color: lavender;
-    display: flex;
     width: 100%;
     height: 100px;
     border-bottom: 4px solid black;
-
 }
 
-.header .logo {
-    display: flex;
-    margin: 0 5%;
-    width: 10%;
-    height: 100px;
-
+.header .container h1 {
+    margin: 0;
+    font-size: 15px;
+    font-family: fantasy;
 }
 
 .header .container {
@@ -24,6 +20,61 @@ body {
     justify-content: space-between;
     width: 80%;
     height: 100px;
-    margin: 0 10% 0 10%;
+    align-items: center;
+    margin: 0 3% 0 3%;
+}
+
+.header .container .logo {
+    margin: 0 5%;
+    width: 90%;
+    height: 60px;
+}
+
+.header .container .casa {
+    margin: 0 5%;
+    width: 3%;
+    height: 25px;
+}
+
+.header .container .sugestoes {
+    margin: 0 5%;
+    width: 2%;
+    height: 20px;
+}
+
+.header .container .forum {
+    margin: 0 5%;
+    width: 2%;
+    height: 20px;
+}
+
+.header .container .sobre_mim {
+    margin: 0 5%;
+    width: 2%;
+    height: 20px;
+}
+
+.header .container .login {
+    margin: 0 5%;
+    width: 2%;
+    height: 20px;
+}
+
+.header .container li{
     list-style: none;
+}
+
+.header .container .navbar {
+    list-style: none;
+}
+
+.header .container .navbar li {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline;
+    padding: 0 40px;
+}
+
+.header .container .navbar li a {
+    color: purple;
+    text-decoration: none;
 }
