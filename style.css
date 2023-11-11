@@ -67,19 +67,30 @@ body{
     text-shadow: 1px 1px 1px;
 }
 
-.banner .container {
-border: red solid 5px;
+.banner{
+    border: solid green 5px;
+    display: flex;
+    justify-content: center;
 }
 
-.banner .container img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 56%;
+.banner .container {
+    display: flex;
+    height: 670px;
+    width: 900px;
     border: blue solid 5px;
+    background-image: url(imagens/livro_fundo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
 }
 
 .banner .container span{
+    display: flex;
+    width: 395px;
+    height: 500px;
     border: yellow solid 5px;
-    margin: 400px;
+    align-items: center;
+    justify-content: center;
+    margin: 45px;
     }
+
