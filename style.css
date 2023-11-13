@@ -1,6 +1,11 @@
 @font-face {
-    font-family: fonte-titulo;
-    src: url(Potato_sans-Black.otf);
+    font-family: fontetitulo;
+    src: url(fontes/Potato_sans-Black.otf);
+}
+
+@font-face {
+    font-family: fonte-subtitulo;
+    src: url(fontes/Florensa-Demo.ttf);
 }
 
 * {
@@ -9,11 +14,11 @@
     text-decoration: none;
 }
 
-body{
+body {
     background-color: lavender;
 }
 
-.header{
+.header {
     background-color: plum;
     border-bottom: black solid 4px;
 }
@@ -23,7 +28,7 @@ body{
     align-items: center;
 }
 
-.header .container .logo{
+.header .container .logo {
     width: 5%;
     padding-left: 1%;
 }
@@ -32,65 +37,137 @@ body{
     width: 100%;
 }
 
-.header .container .logo h1{
+.header .container .logo h1 {
     font-size: 15px;
-    font-family: fantasy;
     text-align: center;
-    font-family: fonte-titulo;
 }
 
 .imagens {
     width: 25px;
 }
 
-.header .container ul{
+.header .container ul {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
 }
 
-.header .container li{
+.header .container li {
     display: flex;
     align-items: center;
     gap: 5px;
     text-shadow: 1px 1px 1px;
-    
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.header .container .cadastrar{
+.header .container .cadastrar {
     width: 20%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     color: darkorchid;
     font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
     text-shadow: 1px 1px 1px;
 }
 
-.banner{
+.banner {
     border: solid green 5px;
     display: flex;
     justify-content: center;
 }
 
 .banner .container {
-    display: flex;
     height: 670px;
     width: 900px;
     border: blue solid 5px;
     background-image: url(imagens/livro_fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
-    
+    /* display: flex; */
+    display: inline;    
+
 }
 
-.banner .container span{
-    display: flex;
+.banner .container .boas_vindas{
     width: 395px;
-    height: 500px;
+    height: 550px;
     border: yellow solid 5px;
-    align-items: center;
-    justify-content: center;
-    margin: 45px;
-    }
+    margin: 45px;   
+}
 
+ .banner .container .boas_vindas h1 {
+    width: 100%;
+    font-family: fontetitulo;
+    color: palevioletred;
+    font-size: 30px;
+    text-align: center;
+    border: darkblue solid 5px;
+    text-shadow: 0.4px 0.4px 0.4px;
+}
+
+.banner .container .texto_boas_vindas {
+    border: firebrick solid 5px;
+    width: 99%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+} 
+
+.banner .container .texto_boas_vindas .pequeno_titulo{
+    font-size: 30px;
+}
+
+.banner .container .boas_vindas2{
+    border: solid 5px darkgrey;
+    width: 395px;
+    height: 100%;
+    margin-left: 420px;
+    /* float: right; */
+    /* height: 550px; */
+}
+
+h2{
+    font-family: fonte-subtitulo;
+    color: darkorchid;
+    border: solid 5px saddlebrown;
+}
+
+h1{
+    font-family: fontetitulo;
+    text-shadow: 0.4px 0.4px 0.4px;
+}
+
+.banner .container2 h1{
+    color: palevioletred;
+    border: darkgoldenrod solid 5px;
+}
+
+.banner .container2 {
+    border: solid 5px darkgreen;
+}
+
+.banner .container2 div {
+    border: solid 5px gray;
+    width: 60%;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    color: darkorchid;
+    font-weight: bolder;
+}
+
+/* .banner .container2 h2{
+  text-align: center;
+} */
+
+/* .banner .container2 .romance{
+    border: 5px solid darkolivegreen;
+} */
+
+.banner .container2 img {
+    border: darkseagreen solid 5px;
+    /* height: 1000px; */
+    width: 20%;
+     float: right;
+     /* display: flex; 
+     margin-block-end: 80px;  */
+}
