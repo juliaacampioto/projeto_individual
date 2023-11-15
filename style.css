@@ -85,9 +85,16 @@ li {
     text-shadow: 1px 1px 1px darkorchid;
 }
 
+.header .container .cadastrar a{
+    border: 10px solid lavender;
+    border-radius: 30px;
+    background-color: lavender;
+}
+
 .banner {
     display: flex;
     justify-content: center;
+    border: solid 5px gold;
 }
 
 .banner .container {
@@ -110,7 +117,7 @@ li {
     width: 50%;
 }
 
-.banner .container .boas_vindas .livro1 h1 {
+.banner .container h1 {
     width: 97%;
     font-family: fontetitulo;
     color: palevioletred;
@@ -176,21 +183,26 @@ li {
 
 .banner .container2 .top5_romance {
     border: solid 5px darkorange;
-    height: 400px;
+    height: 370px;
 }
 
 .banner .container2 .top5_romance .imagens_container2 {
     border: solid 5px darkkhaki;
     justify-content: space-around;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     width: 99%;
     height: 240px;
 }
 
 .imagens_2 {
     border: solid 5px forestgreen;
-    width: 10%;
+    height: 85%;
+    width: 11%;
+}
+
+.imagens_2:hover{
+width: 11.4%;
 }
 
 .nomes_juntos {
@@ -205,15 +217,15 @@ li {
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
-    /* justify-content: space-around; */
     font-size: 19px;
 }
 
 .nomesdoslivros {
     border: solid 5px wheat;
     width: 70%;
-    /* display: flex; */
-    /* align-self: flex-end; */
+    gap: 10px;
+    display: flex;
+    text-align: center;
 }
 
 .num_negrito {
@@ -221,3 +233,15 @@ li {
     border: solid 5px orangered;
     width: 7%;
 }
+
+    .banner .container3 {
+        border: solid 5px darkgoldenrod;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+    }
+
+    .banner .container3 #h1_sobre_mim{
+       border: solid 5px firebrick; 
+       color: palevioletred;
+    }
