@@ -5,31 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BOOK'S CLUB</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="cadastro.html">
-    <link rel="shortcut icon" href="imagens/favicon.ico">
+    <link rel="shortcut icon" href="assets/icon/favicon.ico">
 </head>
 
 <body>
     <div class="header">
         <div class="container">
             <div class="logo">
-                <img src="imagens/logo.png">
+                <img src="assets/imgs/logo.png">
                 <h1>
                     BOOK'S CLUB
                 </h1>
             </div>
             <ul class="itens">
                 <li>
-                    <img src="imagens/casa.png" class="imagens">
+                    <img src="assets/imgs/casa.png" class="imagens">
                     <a href="#">HOME</a>
                 </li>
                 <li>
-                    <img src="imagens/sugestoes.png" class="imagens">
+                    <img src="assets/imgs/sugestoes.png" class="imagens">
                     <a href="#h1_sugestoes">SUGESTÕES DE LIVROS</a>
                 </li>
                 <li>
-                    <img src="imagens/sobre_mim.png" class="imagens">
+                    <img src="assets/imgs/sobre_mim.png" class="imagens">
                     <a href="#h1_sobre_mim">SOBRE A AUTORA</a>
                 </li>
             </ul>
@@ -41,7 +41,7 @@
     </div>
 
     <div class="banner">    
-        <div class="container">
+        <div class="container" style="background-image: url(assets/livro_fundo.png)">
             <div class="boas_vindas">
                 <div class="livro1">
                     <h1>SEJA BEM VINDO AO BOOK´S CLUB!</h1> <br>
@@ -73,16 +73,16 @@
                 <div class="top_romance">
                     <h2>TOP 5 LIVROS - ROMANCE </h2>
                 </div>
-                <img src="imagens/romance.png">
+                <img src="assets/imgs/romance.png">
             </div>
 
             <div class="top5_romance">
                 <div class="imagens_container2">
-                    <img class="imagens_2" src="imagens/livro_como_eu.png">
-                    <img class="imagens_2" src="imagens/por_lugares_incríveis.jpg">
-                    <img class="imagens_2" src="imagens/duque_eu.jpg">
-                    <img class="imagens_2" src="imagens/cidades_papel.jpg">
-                    <img class="imagens_2" src="imagens/para_todos_garotos.jpg">
+                    <img onclick="abrirModal()" class="imagens_2"  src="assets/imgs/livro_como_eu.png">
+                    <img onclick="abrirModal2()"  class="imagens_2" src="assets/imgs/por_lugares_incríveis.jpg">
+                    <img onclick="abrirModal3()" class="imagens_2" src="assets/imgs/duque_eu.jpg">
+                    <img onclick="abrirModal4()" class="imagens_2" src="assets/imgs/cidades_papel.jpg">
+                    <img onclick="abrirModal5()"  class="imagens_2" src="assets/imgs/para_todos_garotos.jpg">
                 </div>
                 <div class="nomes_livros">
                     <div class="nomes_juntos">
@@ -104,21 +104,60 @@
                     <div class="nomesdoslivros">Para todos os garotos que já amei</div>  </div>
                 </div>
             </div>
+            <div id="div_livro_detalhado" class="livro_detalhado">
+                <div class="modal">
+                    <button id="fechar"  class="fechar">X</button>
+                    <h1>Como eu era antes de você - Jojo Moyes</h1>
+                    <p>Esta obra narra a vida agitada de uma jovem pertencente a uma família numerosa. Ao mesmo tempo, apresenta a história de um homem extremamente rico que, apesar de suas conquistas materiais, experimenta uma profunda infelicidade devido à perda do movimento de seus membros. Mas ele não espera o que sentirá por essa jovem... </p>
+                </div>
+            </div>
 
+            <div id="div_livro_detalhado2" class="livro_detalhado">
+                <div class="modal">
+                    <button id="fechar2"  class="fechar">X</button>
+                    <h1>Por lugares incríveis - Jennifer Niven</h1>
+                    <p>Neste livro, acompanhamos a jornada de dois adolescentes que enfrentam momentos desafiadores em suas vidas. Violet acaba de perder sua irmã em um trágico acidente de carro, enquanto Theodore lida com uma estrutura familiar fragilizada e é alvo de bullying na escola. No entanto, em meio a suas adversidades, surge uma história de amor única, onde Theodore se torna o apoio para Violet superar as dificuldades que a vida a impôs.</p>
+                </div>
+            </div>
+
+            <div id="div_livro_detalhado3" class="livro_detalhado">
+                <div class="modal">
+                    <button id="fechar3"  class="fechar">X</button>
+                    <h1>O duque e eu - Julia Quinn</h1>
+                    <p>Nas páginas desta narrativa, mergulhamos na vida de uma jovem cuja mãe anseia desesperadamente por vê-la casada. Em meio a essa busca por um pretendente, ela cruza o caminho de um duque exasperado pelas investidas maternas incessantes. Surge então um pacto entre eles: fingir um relacionamento para satisfazer suas conveniências. No entanto, o que não esperavam era que esse romance fingido os levaria a uma descoberta inesperada — a paixão e o desejo que floresce entre eles.</p>
+                </div>
+            </div>
+
+            <div id="div_livro_detalhado4" class="livro_detalhado">
+                <div class="modal">
+                    <button id="fechar4"  class="fechar">X</button>
+                    <h1>Cidades de papel - John Green</h1>
+                    <p>Este romance gira em torno de Quentin Jacobsen, um estudante do ensino médio, e sua vizinha misteriosa, Margo Roth Spiegelman. Depois de uma noite de aventuras, Margo desaparece, deixando pistas para Quentin encontrá-la. A história segue a jornada de Quentin e seus amigos enquanto tentam desvendar o paradeiro de Margo.</p>
+                </div>
+            </div>
+
+            <div id="div_livro_detalhado5" class="livro_detalhado">
+                <div class="modal">
+                    <button id="fechar5"  class="fechar">X</button>
+                    <h1>Para todos os garotos que já amei - Jenny Han</h1>
+                    <p>Nesta narrativa, acompanhamos a história de uma jovem que, apesar de nunca ter vivido um namoro, expressa seus sentimentos através de cartas destinadas aos cinco meninos por quem se apaixonou. Entretanto, sua vida dá uma guinada inesperada quando sua irmã mais nova, Kitty, decide enviar essas cartas, lançando Lara Jean em uma montanha-russa emocional e virando seu mundo de cabeça para baixo.</p>
+                </div>
+            </div>
+<br>
             <div class="subtitulos">
                 <div class="top_romance">
                     <h2>TOP 5 LIVROS - FICÇÃO </h2>
                 </div>
-                <img src="imagens/ficcao.png">
+                <img src="assets/imgs/ficcao.png">
             </div>
 
             <div class="top5_romance">
                 <div class="imagens_container2">
-                    <img class="imagens_2" src="imagens/rainha_vermelha.jpg">
-                    <img class="imagens_2" src="imagens/tempestade de guerra.jpg">
-                    <img class="imagens_2" src="imagens/revolução_bichos.jpg">
-                    <img class="imagens_2" src="imagens/harry_potter.jpg">
-                    <img class="imagens_2" src="imagens/biblioteca_meia.jpg">
+                    <img onclick="abrirModal6()" class="imagens_2" src="assets/imgs/rainha_vermelha.jpg">
+                    <img onclick="abrirModal7()"class="imagens_2" src="assets/imgs/tempestade de guerra.jpg">
+                    <img onclick="abrirModal8()"class="imagens_2" src="assets/imgs/revolução_bichos.jpg">
+                    <img onclick="abrirModal9()"class="imagens_2" src="assets/imgs/harry_potter.jpg">
+                    <img onclick="abrirModal10()"class="imagens_2" src="assets/imgs/biblioteca_meia.jpg">
                 </div>
                 <div class="nomes_livros">
                     <div class="nomes_juntos">
@@ -141,20 +180,61 @@
                 </div>
             </div>
 
+            <div id="div_livro_detalhado6" class="livro_detalhado">
+                <div class="modal">
+                    <button id="fechar6"  class="fechar">X</button>
+                    <h1>Como eu era antes de você - Jojo Moyes</h1>
+                    <p>Esta obra narra a vida agitada de uma jovem pertencente a uma família numerosa. Ao mesmo tempo, apresenta a história de um homem extremamente rico que, apesar de suas conquistas materiais, experimenta uma profunda infelicidade devido à perda do movimento de seus membros. Mas ele não espera o que sentirá por essa jovem... </p>
+                </div>
+            </div>
+
+            <div id="div_livro_detalhado7" class="livro_detalhado">
+                <div class="modal">
+                    <button id="fechar7"  class="fechar">X</button>
+                    <h1>Por lugares incríveis - Jennifer Niven</h1>
+                    <p>Neste livro, acompanhamos a jornada de dois adolescentes que enfrentam momentos desafiadores em suas vidas. Violet acaba de perder sua irmã em um trágico acidente de carro, enquanto Theodore lida com uma estrutura familiar fragilizada e é alvo de bullying na escola. No entanto, em meio a suas adversidades, surge uma história de amor única, onde Theodore se torna o apoio para Violet superar as dificuldades que a vida a impôs.</p>
+                </div>
+            </div>
+
+            <div id="div_livro_detalhado8" class="livro_detalhado">
+                <div class="modal">
+                    <button id="fechar8"  class="fechar">X</button>
+                    <h1>O duque e eu - Julia Quinn</h1>
+                    <p>Nas páginas desta narrativa, mergulhamos na vida de uma jovem cuja mãe anseia desesperadamente por vê-la casada. Em meio a essa busca por um pretendente, ela cruza o caminho de um duque exasperado pelas investidas maternas incessantes. Surge então um pacto entre eles: fingir um relacionamento para satisfazer suas conveniências. No entanto, o que não esperavam era que esse romance fingido os levaria a uma descoberta inesperada — a paixão e o desejo que floresce entre eles.</p>
+                </div>
+            </div>
+
+            <div id="div_livro_detalhado9" class="livro_detalhado">
+                <div class="modal">
+                    <button id="fechar9"  class="fechar">X</button>
+                    <h1>Cidades de papel - John Green</h1>
+                    <p>Este romance gira em torno de Quentin Jacobsen, um estudante do ensino médio, e sua vizinha misteriosa, Margo Roth Spiegelman. Depois de uma noite de aventuras, Margo desaparece, deixando pistas para Quentin encontrá-la. A história segue a jornada de Quentin e seus amigos enquanto tentam desvendar o paradeiro de Margo.</p>
+                </div>
+            </div>
+
+            <div id="div_livro_detalhado10" class="livro_detalhado">
+                <div class="modal">
+                    <button id="fechar10"  class="fechar">X</button>
+                    <h1>Para todos os garotos que já amei - Jenny Han</h1>
+                    <p>Nesta narrativa, acompanhamos a história de uma jovem que, apesar de nunca ter vivido um namoro, expressa seus sentimentos através de cartas destinadas aos cinco meninos por quem se apaixonou. Entretanto, sua vida dá uma guinada inesperada quando sua irmã mais nova, Kitty, decide enviar essas cartas, lançando Lara Jean em uma montanha-russa emocional e virando seu mundo de cabeça para baixo.</p>
+                </div>
+            </div>
+
+<br>
             <div class="subtitulos">
                 <div class="top_romance">
                     <h2>TOP 5 LIVROS - AÇÃO </h2>
                 </div>
-                <img src="imagens/acao.png">
+                <img src="assets/imgs/acao.png">
             </div>
 
             <div class="top5_romance">
                 <div class="imagens_container2">
-                    <img class="imagens_2" src="imagens/jogos_vorazes.jpg">
-                    <img class="imagens_2" src="imagens/jogos_vorazes_chamas.jpg">
-                    <img class="imagens_2" src="imagens/robinson_crusoe.jpeg">
-                    <img class="imagens_2" src="imagens/the_100.jpg">
-                    <img class="imagens_2" src="imagens/nao_sobrou.png">
+                    <img class="imagens_2" src="assets/imgs/jogos_vorazes.jpg">
+                    <img class="imagens_2" src="assets/imgs/jogos_vorazes_chamas.jpg">
+                    <img class="imagens_2" src="assets/imgs/robinson_crusoe.jpeg">
+                    <img class="imagens_2" src="assets/imgs/the_100.jpg">
+                    <img class="imagens_2" src="assets/imgs/nao_sobrou.png">
                 </div>
                 <div class="nomes_livros">
                     <div class="nomes_juntos">
@@ -177,20 +257,22 @@
                 </div>
             </div>
 
+            <br>
+
             <div class="subtitulos">
                 <div class="top_romance">
                     <h2>TOP 5 LIVROS - POESIA </h2>
                 </div>
-                <img src="imagens/poesia.png">
+                <img src="assets/imgs/poesia.png">
             </div>
 
             <div class="top5_romance">
                 <div class="imagens_container2">
-                    <img class="imagens_2" src="imagens/estranheirismo.jpeg">
-                    <img class="imagens_2" src="imagens/notas_sobre_ela.png">
-                    <img class="imagens_2" src="imagens/princesa_salva.jpg">
-                    <img class="imagens_2" src="imagens/textos_crueis.png">
-                    <img class="imagens_2" src="imagens/outros_jeitos_boca.png">
+                    <img class="imagens_2" src="assets/imgs/estranheirismo.jpeg">
+                    <img class="imagens_2" src="assets/imgs/notas_sobre_ela.png">
+                    <img class="imagens_2" src="assets/imgs/princesa_salva.jpg">
+                    <img class="imagens_2" src="assets/imgs/textos_crueis.png">
+                    <img class="imagens_2" src="assets/imgs/outros_jeitos_boca.png">
                 </div>
                 <div class="nomes_livros">
                     <div class="nomes_juntos">
@@ -214,6 +296,8 @@
             </div>
         </div>
     </div>
+
+    <br>
    
     <br>
     <br>
@@ -222,6 +306,8 @@
   <h1  id="h1_sobre_mim" >SOBRE A AUTORA</h1>
     </div>
 </div>
+
+<script src="js/index.js"></script>
 
 </body>
 
