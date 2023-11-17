@@ -82,7 +82,7 @@ function cadastrar(req, res) {
         res.status(400).send("Sua senha está undefined!");
     }
 
-    cadastrarModel.cadastrar(nome, sobrenome, email, senha).then(function (resposta) {
+    cadastroModel.cadastrar(nome, sobrenome, email, senha).then(function (resposta) {
         res.status(200).send("Cadastro criado com sucesso");
     }).catch(function (erro) {
         res.status(500).json(erro.sqlMessage);

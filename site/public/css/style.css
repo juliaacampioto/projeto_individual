@@ -4,6 +4,10 @@
     text-decoration: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: lavender;
 }
@@ -75,7 +79,7 @@ li {
     text-shadow: 1px 1px 1px darkorchid;
 }
 
-.header .container .cadastrar a{
+.header .container .cadastrar a {
     border: 10px solid lavender;
     border-radius: 30px;
     background-color: lavender;
@@ -130,6 +134,7 @@ li {
     width: 50%;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
+    border: solid 5px gold;
 }
 
 .banner .container2 {
@@ -170,7 +175,7 @@ li {
     border: salmon solid 5px;
 }
 
-.banner .container2 .top5_romance {
+.top5_romance {
     border: solid 5px darkorange;
     height: 370px;
 }
@@ -191,8 +196,8 @@ li {
     cursor: pointer;
 }
 
-.imagens_2:hover{
-width: 11.4%;
+.imagens_2:hover {
+    width: 11.4%;
 }
 
 .nomes_juntos {
@@ -224,7 +229,7 @@ width: 11.4%;
     width: 7%;
 }
 
-.livro_detalhado{
+.livro_detalhado {
     width: 100%;
     /* height: 100vh; */
     position: relative;
@@ -234,42 +239,46 @@ width: 11.4%;
     align-items: center;
     justify-content: center;
     z-index: 999;
-     background-color: lavender; 
-    border: solid 5px hotpink; 
+    background-color: lavender;
+    border: solid 5px hotpink;
 }
 
-.modal{
+.modal {
     width: 90%;
     /* min-width: 450px;
     min-height: 200px; */
     background-color: lavender;
     backdrop-filter: blur(10px);
-    padding: 50px;
+    /* padding: 50px; */
     border-radius: 20px;
     border: solid 5px saddlebrown;
     display: flex;
-    gap: 10px;  
+    gap: 10px;
+    align-items: center;
 }
 
-.modal h1{
+.modal h1 {
     border: solid 5px gold;
     text-align: center;
-    width: 90%;
+    /* width: 50%; */
 
 }
 
-.modal p{
+.modal p {
     border: solid 5px saddlebrown;
     color: black;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
+    /* height: 100%; */
+    width: 180%;
+    /* display: flex; */
     text-align: center;
     padding-top: 10px;
     /* justify-content: center;
-    display: flex; */ 
+    display: flex; */
 }
 
-.fechar{
+.fechar {
     position: absolute;
     top: -10px;
     right: -10px;
@@ -285,18 +294,32 @@ width: 11.4%;
     border: solid 5px darkblue;
 }
 
-.livro_detalhado.abrir{
+.livro_detalhado.abrir {
     display: flex;
 }
 
-    .banner .container3 {
-        border: solid 5px darkgoldenrod;
-        width: 100%;
-        justify-content: center;
-        display: flex;
-    }
+.banner .container3 {
+    border: solid 5px darkgoldenrod;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
 
-    .banner .container3 #h1_sobre_mim{
-       border: solid 5px firebrick; 
-       color: palevioletred;
-    }
+.sobre_mim_class {
+    border: solid 5px darkblue;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+}
+
+.banner .container3 #h1_sobre_mim {
+    border: solid 5px firebrick;
+    color: palevioletred;
+}
+
+.img_sobre_mim{
+    border:  solid 5px salmon;
+    width: 10%;
+}

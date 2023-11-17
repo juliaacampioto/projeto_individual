@@ -111,3 +111,117 @@ function abrirModal10(){
         }
     } ) 
 }
+
+// Ação
+
+function abrirModal11(){
+    const modal = document.getElementById('div_livro_detalhado11')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar11' || e.target.id == 'div_livro_detalhado11'){
+            modal.classList.remove('abrir')
+        }
+    } ) 
+}
+
+function abrirModal12(){
+    const modal = document.getElementById('div_livro_detalhado12')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar12' || e.target.id == 'div_livro_detalhado12'){
+            modal.classList.remove('abrir')
+        }
+    } ) 
+}
+
+function abrirModal13(){
+    const modal = document.getElementById('div_livro_detalhado13')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar13' || e.target.id == 'div_livro_detalhado13'){
+            modal.classList.remove('abrir')
+        }
+    } ) 
+}
+
+function abrirModal14(){
+    const modal = document.getElementById('div_livro_detalhado14')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar14' || e.target.id == 'div_livro_detalhado14'){
+            modal.classList.remove('abrir')
+        }
+    } ) 
+}
+
+function abrirModal15(){
+    const modal = document.getElementById('div_livro_detalhado15')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar15' || e.target.id == 'div_livro_detalhado15'){
+            modal.classList.remove('abrir')
+        }
+    } ) 
+}
+
+//  Poesia
+
+function abrirModal16(){
+    const modal = document.getElementById('div_livro_detalhado16')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar16' || e.target.id == 'div_livro_detalhado16'){
+            modal.classList.remove('abrir')
+        }
+    } ) 
+}
+
+function abrirModal17(){
+    const modal = document.getElementById('div_livro_detalhado17')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar17' || e.target.id == 'div_livro_detalhado17'){
+            modal.classList.remove('abrir')
+        }
+    } ) 
+}
+
+function abrirModal18(){
+    const modal = document.getElementById('div_livro_detalhado18')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar18' || e.target.id == 'div_livro_detalhado18'){
+            modal.classList.remove('abrir')
+        }
+    } ) 
+}
+
+function abrirModal19(){
+    const modal = document.getElementById('div_livro_detalhado19')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar19' || e.target.id == 'div_livro_detalhado19'){
+            modal.classList.remove('abrir')
+        }
+    } ) 
+}
+
+function abrirModal20(){
+    const modal = document.getElementById('div_livro_detalhado20')
+    modal.classList.add('abrir')
+
+    modal.addEventListener('click', (e) => {
+        if(e.target.id == 'fechar20' || e.target.id == 'div_livro_detalhado20'){
+            modal.classList.remove('abrir')
+        }
+    } ) 
+}

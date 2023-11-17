@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <meta charset="utf-8">
-    <!-- <link rel="shortcut icon" href="imagens/favicon.ico">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.html">
     <link rel="stylesheet" href="cadastro.css">
     <link rel="stylesheet" href="cadastro.js"> -->
@@ -42,27 +41,9 @@
     // var cpfVar = cpf_input.value;
     var senhaVar = input_senha.value;
     var confirmacaoSenhaVar = input_confirmarSenha.value;
-    // var empresaVar = listaEmpresas.value
 
-    if (
-      nomeVar == "" ||
-      sobrenomeVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == ""
-    ) {
-      // cardErro.style.display = "block";
-      mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
-
-      // finalizarAguardar();
-      return false;
-    // } else {
-    //   setInterval(sumirMensagem, 5000);
-    // } 
-
-    // Enviando o valor da nova input
     fetch("/cadastro/cadastrar", {
+      
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -78,32 +59,32 @@
     })
       .then(function (resposta) {
         console.log("resposta: ", resposta);
+    alert ("AAA");
 
-        if(nomeVar.length <= 1){
-        alert("Insira um nome válido");
-      } else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".") == -1){
-        alert(`O e-mail precisa conter um "@" e um "." `);
-      } else if(senhaVar.length < 6){
-        alert("Insira uma senha com pelo menos 6 caracteres");
+
+      //   if(nomeVar.length <= 1){
+      //   alert("Insira um nome válido");
+      // } else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".") == -1){
+      //   alert(`O e-mail precisa conter um "@" e um "." `);
+      // } else if(senhaVar.length < 6){
+      //   alert("Insira uma senha com pelo menos 6 caracteres");
     //   } else if(cpfVar.length < 14 || cpfVar.length > 14){
     //     alert("O CPF precisa conter 14 caracteres");
-      } else if(senhaVar != confirmacaoSenhaVar)
-        alert("As senhas estão diferentes");
-        else if (resposta.ok) {
+;
           // cardErro.style.display = "block";
 
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+          // mensagem_erro.innerHTML =
+          //   "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-          setTimeout(() => {
-            window.location = "login.html";
-          }, "2000");
+          // setTimeout(() => {
+          //   window.location = "login.html";
+          // }, "2000");
 
-          limparFormulario();
+          // limparFormulario();
           // finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
+        // } else {
+        //   throw "Houve um erro ao tentar realizar o cadastro!";
+        // }
       })
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
@@ -132,5 +113,5 @@
 
   // function sumirMensagem() {
   //   cardErro.style.display = "none";
-  }
+  // }
 </script>
