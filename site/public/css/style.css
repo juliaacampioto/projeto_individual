@@ -13,13 +13,11 @@ body {
 }
 
 h1 {
-    font-family: fontetitulo;
     text-shadow: 0.4px 0.4px 0.4px palevioletred;
     font-size: 35px;
 }
 
 h2 {
-    font-family: fonte-subtitulo;
     color: darkorchid;
     text-shadow: 0.4px 0.4px 0.4px darkorchid;
     border: solid 5px saddlebrown;
@@ -112,7 +110,6 @@ li {
 
 .banner .container h1 {
     width: 97%;
-    font-family: fontetitulo;
     color: palevioletred;
     text-align: center;
     text-shadow: 0.4px 0.4px 0.4px palevioletred;
@@ -134,11 +131,9 @@ li {
     width: 50%;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
-    border: solid 5px gold;
 }
 
 .banner .container2 {
-    border: solid 5px darkgreen;
     justify-content: center;
     display: inline-block;
     /* height: 670px; */
@@ -147,18 +142,15 @@ li {
 
 .banner .container2 h1 {
     color: palevioletred;
-    border: darkgoldenrod solid 5px;
     justify-content: center;
     display: flex;
 }
 
 .banner .container2 h2 {
-    border: solid 5px firebrick;
     text-align: center;
 }
 
 .banner .container2 .subtitulos {
-    border: navy solid 5px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -167,21 +159,17 @@ li {
 .banner .container2 .subtitulos .top_romance {
     display: flex;
     align-items: center;
-    border: honeydew solid 5px;
 }
 
 .banner .container2 .subtitulos img {
     width: 3%;
-    border: salmon solid 5px;
 }
 
 .top5_romance {
-    border: solid 5px darkorange;
     height: 370px;
 }
 
 .banner .container2 .top5_romance .imagens_container2 {
-    border: solid 5px darkkhaki;
     justify-content: space-around;
     display: flex;
     align-items: center;
@@ -190,7 +178,6 @@ li {
 }
 
 .imagens_2 {
-    border: solid 5px forestgreen;
     height: 85%;
     width: 11%;
     cursor: pointer;
@@ -201,31 +188,29 @@ li {
 }
 
 .nomes_juntos {
-    border: solid 5px hotpink;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
 }
 
 .nomes_livros {
-    border: solid 5px darkslategrey;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: center;
+    width: 97%;
     font-size: 19px;
+    /* gap: 10px; */
 }
 
 .nomesdoslivros {
-    border: solid 5px wheat;
     width: 70%;
-    gap: 10px;
+    /* gap: 3px; */
     display: flex;
     text-align: center;
 }
 
 .num_negrito {
     font-weight: bolder;
-    border: solid 5px orangered;
     width: 7%;
 }
 
@@ -240,32 +225,34 @@ li {
     justify-content: center;
     z-index: 999;
     background-color: lavender;
-    border: solid 5px hotpink;
 }
 
 .modal {
-    width: 90%;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
     /* min-width: 450px;
     min-height: 200px; */
-    background-color: lavender;
+    background-color: white;
     backdrop-filter: blur(10px);
     /* padding: 50px; */
     border-radius: 20px;
-    border: solid 5px saddlebrown;
+    border: solid 5px palevioletred;
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
 .modal h1 {
-    border: solid 5px gold;
     text-align: center;
     /* width: 50%; */
 
 }
+/* 
+.h1_livros{
+    color: darkorchid;
+} */
 
 .modal p {
-    border: solid 5px saddlebrown;
     color: black;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
@@ -291,7 +278,6 @@ li {
     font-size: 20px;
     font-weight: bolder;
     cursor: pointer;
-    border: solid 5px darkblue;
 }
 
 .livro_detalhado.abrir {
@@ -302,7 +288,10 @@ li {
     border: solid 5px darkgoldenrod;
     width: 100%;
     justify-content: center;
-    display: flex;
+    /* display: flex; */
+    /* background-repeat: no-repeat;
+    height: 900px;
+    background-size: cover; */
 }
 
 .sobre_mim_class {
@@ -321,5 +310,29 @@ li {
 
 .img_sobre_mim{
     border:  solid 5px salmon;
-    width: 10%;
+    width: 6%;
+}
+
+.banner .container3 .texto{
+    border: solid 5px firebrick;
+    display: flex;
+    gap: 15px;
+}
+
+.banner .container3 .texto .imagem_eu{
+    border: solid 5px forestgreen;
+    /* height: 85%; */
+    width: 17%;
+    margin-left: 10px;
+}
+
+.banner .container3 .texto .meu_nome{
+    text-align: justify;
+    border:  solid 5px darkcyan;
+    width: 78%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.imagens_vida{
+    border: solid 5px darkblue;
 }
