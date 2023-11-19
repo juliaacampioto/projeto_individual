@@ -12,6 +12,16 @@ body {
     background-color: lavender;
 }
 
+::-webkit-scrollbar {
+    width: 13px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: plum;
+    border-radius: 10px;
+}
+
 h1 {
     text-shadow: 0.4px 0.4px 0.4px palevioletred;
     font-size: 35px;
@@ -20,12 +30,14 @@ h1 {
 h2 {
     color: darkorchid;
     text-shadow: 0.4px 0.4px 0.4px darkorchid;
-    border: solid 5px saddlebrown;
 }
 
 .header {
     background-color: plum;
     border-bottom: black solid 4px;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 .header .container {
@@ -78,7 +90,8 @@ li {
 }
 
 .header .container .cadastrar a {
-    border: 10px solid lavender;
+    /* width: 20%; */
+    border: solid 5px lavender;
     border-radius: 30px;
     background-color: lavender;
 }
@@ -86,7 +99,6 @@ li {
 .banner {
     display: flex;
     justify-content: center;
-    border: solid 5px gold;
 }
 
 .banner .container {
@@ -119,6 +131,9 @@ li {
     width: 97%;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: justify;
 }
 
 .pequeno_titulo {
@@ -131,12 +146,22 @@ li {
     width: 50%;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: justify;
+}
+
+.imgs_onu {
+    width: 15%;
+    height: 80%;
+    margin-left: 40px;
+    display: flex;
+    align-self: center;
 }
 
 .banner .container2 {
     justify-content: center;
     display: inline-block;
-    /* height: 670px; */
     width: 95%;
 }
 
@@ -199,12 +224,10 @@ li {
     justify-content: center;
     width: 97%;
     font-size: 19px;
-    /* gap: 10px; */
 }
 
 .nomesdoslivros {
     width: 70%;
-    /* gap: 3px; */
     display: flex;
     text-align: center;
 }
@@ -216,7 +239,6 @@ li {
 
 .livro_detalhado {
     width: 100%;
-    /* height: 100vh; */
     position: relative;
     top: 0;
     left: 0;
@@ -230,11 +252,8 @@ li {
 .modal {
     width: 100%;
     padding: 10px 10px 10px 10px;
-    /* min-width: 450px;
-    min-height: 200px; */
     background-color: white;
     backdrop-filter: blur(10px);
-    /* padding: 50px; */
     border-radius: 20px;
     border: solid 5px palevioletred;
     display: flex;
@@ -244,25 +263,16 @@ li {
 
 .modal h1 {
     text-align: center;
-    /* width: 50%; */
-
 }
-/* 
-.h1_livros{
-    color: darkorchid;
-} */
 
 .modal p {
+    padding-right: 30px;
     color: black;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
-    /* height: 100%; */
     width: 180%;
-    /* display: flex; */
-    text-align: center;
+    text-align: justify;
     padding-top: 10px;
-    /* justify-content: center;
-    display: flex; */
 }
 
 .fechar {
@@ -270,7 +280,6 @@ li {
     top: -10px;
     right: -10px;
     width: 40px;
-    /* height: 30px; */
     border-radius: 50%;
     border: 0;
     background-color: plum;
@@ -285,54 +294,121 @@ li {
 }
 
 .banner .container3 {
-    border: solid 5px darkgoldenrod;
     width: 100%;
     justify-content: center;
-    /* display: flex; */
-    /* background-repeat: no-repeat;
-    height: 900px;
-    background-size: cover; */
 }
 
 .sobre_mim_class {
-    border: solid 5px darkblue;
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    /* text-align: center; */
 }
 
-.banner .container3 #h1_sobre_mim {
-    border: solid 5px firebrick;
+.banner .container3 .h1_sobre_mim {
     color: palevioletred;
 }
 
-.img_sobre_mim{
-    border:  solid 5px salmon;
-    width: 6%;
+.img_sobre_mim {
+    width: 4%;
 }
 
-.banner .container3 .texto{
-    border: solid 5px firebrick;
+.banner .container3 .texto {
     display: flex;
     gap: 15px;
 }
 
-.banner .container3 .texto .imagem_eu{
-    border: solid 5px forestgreen;
-    /* height: 85%; */
+.banner .container3 .texto .imagem_eu {
     width: 17%;
     margin-left: 10px;
 }
 
-.banner .container3 .texto .meu_nome{
+.banner .container3 .texto .meu_nome {
     text-align: justify;
-    border:  solid 5px darkcyan;
     width: 78%;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.imagens_vida{
-    border: solid 5px darkblue;
+.footer {
+    background-color: plum;
+}
+
+.footer .container_footer {
+    padding-top: 15px;
+}
+
+.footer .container_footer .footer_booksclub {
+    justify-content: center;
+    display: flex;
+    text-shadow: 0.4px 0.4px 0.4px palevioletred;
+    font-size: 15px;
+}
+
+.footer .container_footer .titulos_footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+}
+
+.footer .container_footer .titulos_footer .h2_footer {
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 1px 1px 1px darkorchid;
+    width: 25%;
+    font-size: 23px;
+    color: black;
+}
+
+.footer .container_footer .footer_texto {
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.footer .container_footer .footer_texto .footer_topicos {
+    width: 25%;
+    text-align: center;
+}
+
+.footer .container_footer .footer_texto a {
+    width: 70%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    text-shadow: 1px 1px 1px;
+    color: black;
+}
+
+.footer .container_footer .footer_texto .footer_topicos .textos {
+    width: 20%;
+    margin-top: 5px;
+}
+
+.footer .container_footer .footer_texto .footer_topicos .texto_topicos {
+    width: 70%;
+}
+
+.footer_topicos ul {
+    display: inline;
+}
+
+.footer .container_footer .footer_texto .footer_topicos .div_imagens img {
+    padding-left: 55px;
+    padding-top: 5px;
+    width: 10%;
+}
+
+.item_sptech {
+    padding-left: 45px;
+}
+
+.id_ods {
+    height: 40px;
+}
+
+.texto_ods4 {
+    display: flex;
+    margin-top: 10px;
 }

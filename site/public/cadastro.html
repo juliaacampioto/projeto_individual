@@ -6,19 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <meta charset="utf-8">
-    <!-- <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.html">
-    <link rel="stylesheet" href="cadastro.css">
-    <link rel="stylesheet" href="cadastro.js"> -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
         
 </head>
 
 <body>
-    <!-- <div class="logo">
+    <div class="logo">
         <img src="imagens/logo.png">
         <h1>
             BOOK'S CLUB
-        </h1> -->
+        </h1>
     </div>
 
     Nome: <input type="text" id="input_nome"> <br>
@@ -29,86 +27,5 @@
     <button onclick="cadastrar()">Cadastrar</button>
 </body>
 </html>
-<script>
-    function cadastrar() {
-    // aguardar();
-
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = input_nome.value;
-    var sobrenomeVar = input_sobrenome.value;
-    var emailVar = input_email.value;
-    // var cpfVar = cpf_input.value;
-    var senhaVar = input_senha.value;
-    var confirmacaoSenhaVar = input_confirmarSenha.value;
-
-    fetch("/cadastro/cadastrar", {
-      
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        sobrenomeServer: sobrenomeVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-       //   if(nomeVar.length <= 1){
-      //   alert("Insira um nome válido");
-      // } else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".") == -1){
-      //   alert(`O e-mail precisa conter um "@" e um "." `);
-      // } else if(senhaVar.length < 6){
-      //   alert("Insira uma senha com pelo menos 6 caracteres");
-    //   } else if(cpfVar.length < 14 || cpfVar.length > 14){
-    //     alert("O CPF precisa conter 14 caracteres");
-;
-          // cardErro.style.display = "block";
-
-          // mensagem_erro.innerHTML =
-          //   "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-          // setTimeout(() => {
-          //   window.location = "login.html";
-          // }, "2000");
-
-          // limparFormulario();
-          // finalizarAguardar();
-        // } else {
-        //   throw "Houve um erro ao tentar realizar o cadastro!";
-        // }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        // finalizarAguardar();  
-      });
-
-    return false;
-
-  }
-
-//   function listar() {
-//     fetch("/empresas/listar", {
-//       method: "GET",
-//     })
-//       .then(function (resposta) {
-//         resposta.json().then((empresas) => {
-//           empresas.forEach((empresa) => {
-//             listaEmpresas.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
-//           });
-//         });
-//       })
-//       .catch(function (resposta) {
-//         console.log(`#ERRO: ${resposta}`);
-//       });
-//   }
-
-  // function sumirMensagem() {
-  //   cardErro.style.display = "none";
-  // }
+<script src="js/cadastro.js">
 </script>
