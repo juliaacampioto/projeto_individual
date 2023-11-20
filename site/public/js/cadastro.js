@@ -6,6 +6,11 @@ function cadastrar() {
     var senhaVar = input_senha.value;
     var confirmacaoSenhaVar = input_confirmarSenha.value;
 
+  // if(nomeVar == `` || sobrenomeVar == `` || emailVar == `` || senhaVar == `` || confirmacaoSenhaVar == ``){
+
+  // }
+
+
     fetch("/cadastro/cadastrar", {
       
       method: "POST",

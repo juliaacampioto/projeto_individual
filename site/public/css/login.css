@@ -1,9 +1,10 @@
 input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
+    padding: 0px 50px 0px 50px;
 }
 
-.home_login{
+.home_login {
     border-radius: 15px;
     border: solid 3px black;
     padding-top: 5px;
@@ -13,31 +14,37 @@ input:focus {
     margin-right: 1100px;
 }
 
-.banner_login{
-   padding-top: 100px;
+.banner_login {
+    padding-top: 100px;
     border: solid 5px hotpink;
     display: flex;
     justify-content: center;
 }
 
-.banner_login .container_login2{
+.banner_login .container_login2 {
     width: 55%;
     background-repeat: no-repeat;
-    height: 670px;
+    height: 730px;
     border: solid 5px gold;
     justify-content: center;
     display: flex;
     align-items: center;
 }
 
-.banner_login .container_login2 .campos_login{
+.banner_login .container_login2 .campos_login {
     border: solid 5px olive;
     width: 60%;
     height: 300px;
-    margin-right: 100px;
 }
 
-.banner_login  .container_login2 .campos_login .email{
+.banner_login .container_login2 .campos_login .botao {
+    border: solid 5px green;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.email {
     border: solid 5px #e5dad8;
     border-radius: 20px;
     width: 12%;
@@ -46,33 +53,32 @@ input:focus {
     font-weight: bolder;
 }
 
-.banner_login  .container_login2 .campos_login .login_email{
+.login_email {
     border: solid 5px hotpink;
     font-size: 19px;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.banner_login  .container_login2 .campos_login input{
+.input {
     border: solid 0.5px black;
     border-radius: 20px;
-    width: 50%;
     margin-left: 10px;
     margin-top: 4px;
     margin-block-end: 4px;
 }
 
-.banner_login  .container_login2 .campos_login button{
-   background-color: #e5dad8;
-   cursor: pointer;
-   width: 18%;
-   font-family: 'Courier New', Courier, monospace;
-   font-size: 19px;
-   font-weight: bolder;
-   padding-top: 4px;
-   padding-block-end: 4px;
+.banner_login .container_login2 .campos_login button {
+    background-color: #e5dad8;
+    cursor: pointer;
+    width: 18%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    font-weight: bolder;
+    padding-top: 4px;
+    padding-block-end: 4px;
 }
 
-.emails{
+.emails {
     border: solid 5px firebrick;
     display: flex;
     justify-content: center;
