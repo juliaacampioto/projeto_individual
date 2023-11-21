@@ -3,15 +3,14 @@ function entrar() {
     var emailVar = input_email.value;
     var senhaVar = input_senha.value;
 
-    if (emailVar == "" || senhaVar == "") {
-        mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-        return false;
+    if(emailVar === '' || senhaVar === '') {
+        div_erro.innerHTML = `Preencha todos os campos!`
     }
 
     console.log("FORM LOGIN: ", emailVar);
     console.log("FORM SENHA: ", senhaVar);
 
-    fetch("/cadastro/autenticar", {
+    fetch("/login/autenticar", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -34,8 +33,7 @@ function entrar() {
                 sessionStorage.ID_USUARIO = json.id;
 
                 setTimeout(function () {
-                    // Nome da minha página que vai pra lá (gráficos)
-                    window.location = "./dashboard/cards.html";
+                    window.location = "./dashboard.html";
                 }, 1000);
             });
 
@@ -48,7 +46,7 @@ function entrar() {
             });
         }
 
-    }).catch(function (erro) {
+    }).catch(function (erro) {  
         console.log(erro);
     })
 

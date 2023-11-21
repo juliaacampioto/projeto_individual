@@ -1,4 +1,4 @@
-var cadastroModel = require("../models/cadastroModel");
+var loginModel = require("../models/loginModel");
 
 function autenticar(req, res) {
     var email = req.body.emailServer;
@@ -9,22 +9,32 @@ function autenticar(req, res) {
     } else if (senha == undefined) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
-
-        cadastroModel.autenticar(email, senha)
+        loginModel.autenticar(email, senha)
             .then(
                 function (resultadoAutenticar) {
                     console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
-                    console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
-
+                    console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); 
                     if (resultadoAutenticar.length == 1) {
                         console.log(resultadoAutenticar);
+                    
+                        if (resultadoAutenticar.length == 1) {
                         
+                            console.log(resultadoAutenticar);
+    
+                            res.json({
+                                id: resultadoAutenticar[0].id,  
+                                email: resultadoAutenticar[0].email,
+                                nome: resultadoAutenticar[0].nome,
+                                senha: resultadoAutenticar[0].senha
+                                                        
+                            });
+                    
                     } else if (resultadoAutenticar.length == 0) {
                         res.status(403).send("Email e/ou senha inválido(s)");
                     } else {
                         res.status(403).send("Mais de um usuário com o mesmo login e senha!");
                     }
-                }
+                }}
             ).catch(
                 function (erro) {
                     console.log(erro);
@@ -33,39 +43,7 @@ function autenticar(req, res) {
                 }
             );
     }
-
 }
-
-function cadastrar(req, res) {
-    var nome = req.body.nomeServer;
-    var sobrenome = req.body.sobrenomeServer;
-    var email = req.body.emailServer;
-    var senha = req.body.senhaServer;
-
-    if (nome == undefined) {
-        res.status(400).send("Seu nome está undefined!");
-    }
-
-    if (sobrenome == undefined) {
-        res.status(400).send("Seu sobrenome está undefined!");
-    }
-
-    if (email == undefined) {
-        res.status(400).send("Seu email está undefined!");
-    }
-
-    if (senha == undefined) {
-        res.status(400).send("Sua senha está undefined!");
-    }
-
-    cadastroModel.cadastrar(nome, sobrenome, email, senha).then(function (resposta) {
-        res.status(200).send("Cadastro criado com sucesso");
-    }).catch(function (erro) {
-        res.status(500).json(erro.sqlMessage);
-    })
-}
-
 module.exports = {
-    cadastrar,
     autenticar
 }

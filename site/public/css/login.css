@@ -1,7 +1,7 @@
 input:focus {
     box-shadow: 0 0 0 0;
     outline: 0;
-    padding: 0px 50px 0px 50px;
+    padding: 0px 30px 0px 30px;
 }
 
 .home_login {
@@ -65,6 +65,7 @@ input:focus {
     margin-left: 10px;
     margin-top: 4px;
     margin-block-end: 4px;
+    padding: 5px;
 }
 
 .banner_login .container_login2 .campos_login button {

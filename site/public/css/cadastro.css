@@ -1,14 +1,14 @@
 .banner_login .container_login2 .campos_login2{
   border: solid 5px olive;
   width: 80%;
-  height: 55%;
+  height: 65%;
   margin-left: 10px;
 }
 
 .sobrenome{
   border: solid 5px #e5dad8;
   border-radius: 20px;
-  width: 20%;
+  width: 17%;
   text-align: center;
   background-color: #e5dad8;
   font-weight: bolder;
@@ -29,6 +29,23 @@
   margin-left: 10px;
   margin-top: 4px;
   margin-block-end: 4px;
+  padding: 5px;
+}
+
+.banner_login .container_login2 .campos_login2 .button2 {
+  background-color: #e5dad8;
+  cursor: pointer;
+  width: 30%;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  font-weight: bolder;
+  padding-top: 4px;
+  padding-block-end: 4px;
+  transition: background-color 0.3s;
+}
+
+.banner_login .container_login2 .campos_login2 .button2:hover {
+  background-color: #b7a89c; 
 }
 
 
@@ -39,13 +56,12 @@
   margin-top: 20px;
 }
 
-.banner_login .container_login2 .campos_login2 .button2{
-  background-color: #e5dad8;
-  cursor: pointer;
-  width: 30%;
+.erro{
+  border: solid 5px gold;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 25px;
+  font-size: 19px;
+  color: red  ;
+  justify-content: center;
   font-weight: bolder;
-  padding-top: 4px;
-  padding-block-end: 4px;
+  display: flex;
 }
