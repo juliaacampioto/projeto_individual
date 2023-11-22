@@ -1,3 +1,7 @@
+*{
+overflow-x: hidden;    
+}
+
 .tudo{
     border: solid 5px lawngreen;
     display: flex;
@@ -12,6 +16,7 @@
     display: flex;
     border: solid 5px tan;
     width: 14%;
+    overflow-y: hidden;
 }
 
 .container_menu .menu {
@@ -50,13 +55,14 @@
 .container_dash h1{
     border: solid 5px gainsboro;
     text-align: center;
+    margin-top: 10px;
 }
 
 .tudo_metrica{
-    /* border: solid 5px royalblue; */
-    margin-left: 50px;
-    margin-right: 50px;
-}
+    border: solid 5px royalblue;
+     margin-left: 50px; 
+     margin-right: 50px;
+} 
 
 .container_dash .classificacao{
     display: flex;
@@ -179,7 +185,7 @@ h2{
     /* border: solid 5px magenta; */
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
-    background-color: plum;
+    background-color: #b7a89c;
     display: flex;
     width: 80%;
     /* justify-content: center;
@@ -202,4 +208,81 @@ h2{
 .kpis{
     width: 50%;
     border: solid 5px tan;
+}
+
+.grafico_pizza{
+    border: solid 5px khaki;
+    width: 50%;
+}
+
+.mostrar{
+    border: solid 5px hotpink;
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 2% 20%;
+    border-radius: 5%;
+}
+
+.mostrar .mostrar_dentro{
+    border: solid 5px firebrick;
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(200, 230, 180, 0.300);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.x{
+    border: solid 5px khaki;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: aquamarine;
+    color: blue;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.mostrar .mostrar_entrar .inserir {
+    border: solid 5px navy;
+}
+
+.mostrar.abrir{
+    display: flex;
+}
+
+@keyframes abrir{
+    from{
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}
+
+.abrir .mostrar_dentro{
+animation: abrir 0.5s;
 }

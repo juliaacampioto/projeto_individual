@@ -15,11 +15,11 @@ function cadastrar() {
     div_erro.innerHTML = `Preencha todos os campos!`;
   } else if (senhaVar !== confirmacaoSenhaVar) {
     div_erro.innerHTML = `As senhas não coincidem`;
-  }
-  else if (!validarEmail(emailVar)) {
+  } else if (!validarEmail(emailVar)) {
     div_erro.innerHTML = `Por favor, insira um e-mail válido`;
-
-  } else {
+  } else if(senhaVar.length < 8){
+    div_erro.innerHTML = `A senha deve conter pelo menos 8 dígitos`
+  }  else {
     window.location.href = 'login.html';
     fetch("/cadastro/cadastrar", {
       method: "POST",

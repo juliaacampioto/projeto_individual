@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Book's Club - Dashboard</title>
 </head>
 
@@ -17,13 +16,34 @@
             <div class="menu">
                 <ul class="menu-list"> <br>
                     <li><a href="#">DASHBOARD</a></li> <br>
-                    <li><a href="#">INSERIR DADOS</a></li> <br>
+                    <li><a onclick="abrir_dados()">INSERIR LIVRO</a></li> <br>
+                    <li><a href="#">RESPONDER PERGUNTAS</a></li> <br>
                     <li><a href="index.html">SAIR</a></li>
                 </ul>
             </div>
         </div>
+
+
+       
+        <div id="div_mostrar" class="mostrar">
+            <div class="mostrar_dentro">
+           <button class="x" id="fechar">X</button>
+           <div class="inserir"> <b> Começou a ler um livro? </b> <br> <br>Nome do livro: <input type="text" id="id_nome_do_livro"> <br> <br> Gênero: <select name="" id="select_genero">
+            <option value="romance">Romance</option>
+            <option value="ficcao">Ficção</option>
+            <option value="acao">Ação</option>
+            <option value="poesia">Poesia</option>
+           </select> 
+           <br> <br> Autor(a): <input type="text" id="input_autor">
+           <br> <br> Data de início: <input type="text" id="input_data_inicio"> <br> <br> <button onclick="registrarlivro()">Registrar livro</button>
+           </div>
+        </div>
+        </div>
+ 
+
+
         <div class="container_dash">
-            <h1>Seja bem-vindo à sua dashboard!</h1> <br> <br>
+            <h1 id="titulo">Seja bem-vindo à sua dashboard!</h1> <br> <br>
             <h2>Métricas</h2> <br>
             <div class="tudo_metrica">
                 <div class="classificacao">
@@ -79,28 +99,121 @@
                 </div>
             </div>
 
-            <!-- </div> -->
-            <!-- <div class="container_dash">     -->
+
+
             <div class="banner2">
-                <h2>Livros lidos por ano</h2><br>
+                <h2>Livros lidos anualmente</h2><br>
                 <div class="kpi">
                     <div class="kpis">
-                    <div class="imagem_placa"> <div class="kpi_texto">Ano que mais leu</div>
-                    <div class="kpi_texto">Ano que menos leu</div>
+                        <div class="imagem_placa">
+                            <div class="kpi_texto">Ano que mais leu</div>
+                            <div class="kpi_texto">Ano que menos leu</div>
+                        </div>
+                        <div class="imagem_placa">
+                            <div class="kpi_texto">2020</div>
+                            <div class="kpi_texto">2023</div>
+                        </div>
+                        <div class="imagem_placa">
+                            <div class="kpi_texto" style="color: pink;">Bom</div>
+                            <div class="kpi_texto">2023</div>
+                        </div>
                     </div>
-                    <div class="imagem_placa"> <div class="kpi_texto">2020</div>
-                    <div class="kpi_texto">2023</div>
-                    </div>
-                </div>
                     <div class="tudo_metrica2">
                         <div>
                             <canvas id="myChart2" style="position: relative; height: 40vh; width: 40vw;"></canvas>
                         </div>
                     </div>
-
                 </div>
             </div>
-            <!-- </div> -->
+
+
+
+            <br> <br>
+            <h2>Métricas</h2> <br>
+            <div class="tudo_metrica">
+                <div class="classificacao">
+                    <div class="classificacao_metrica"><b>
+                            Desempenho do leitor</b>
+                    </div>
+                    <div class="classificacao_metrica_muito_ruim">
+                        <div class="colocar_baixo">
+                            Muito ruim
+                        </div>
+                    </div>
+                    <div class="classificacao_metrica_ruim">
+                        <div class="colocar_baixo">
+                            Ruim </div>
+                    </div>
+                    <div class="classificacao_metrica_mediano">
+                        <div class="colocar_baixo">
+                            Mediano</div>
+                    </div>
+                    <div class="classificacao_metrica_bom">
+                        <div class="colocar_baixo">
+                            Bom</div>
+                    </div>
+                    <div class="classificacao_metrica_muito_bom">
+                        <div class="colocar_baixo">
+                            Muito bom</div>
+                    </div>
+                </div>
+                <div class="classificacao2">
+                    <div class="classificacao_metrica2"><b>
+                            Livros lidos anualmente</b>
+                    </div>
+                    <div class="classificacao_metrica_muito_ruim">
+                        <div class="colocar_baixo">
+                            Até 5 </div>
+                    </div>
+                    <div class="classificacao_metrica_ruim">
+                        <div class="colocar_baixo">
+                            Entre 6 - 10</div>
+                    </div>
+                    <div class="classificacao_metrica_mediano">
+                        <div class="colocar_baixo">
+                            Entre 11 - 15 </div>
+                    </div>
+                    <div class="classificacao_metrica_bom">
+                        <div class="colocar_baixo">
+                            Entre 16 - 20</div>
+                    </div>
+                    <div class="classificacao_metrica_muito_bom">
+                        <div class="colocar_baixo">
+                            Acima de 20 </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="banner2">
+                <h2>Livros lidos mensalmente</h2><br>
+                <div class="kpi">
+                    <div class="kpis">
+                        <div class="imagem_placa">
+                            <div class="kpi_texto">Ano que mais leu</div>
+                            <div class="kpi_texto">Ano que menos leu</div>
+                        </div>
+                        <div class="imagem_placa">
+                            <div class="kpi_texto">2020</div>
+                            <div class="kpi_texto">2023</div>
+                        </div>
+                        <div class="imagem_placa">
+                            <div class="kpi_texto" style="color: pink;">Bom</div>
+                            <div class="kpi_texto">2023</div>
+                        </div>
+                    </div>
+                    <div class="tudo_metrica2">
+                        <div>
+                            <canvas id="myChart3" style="position: relative; height: 40vh; width: 40vw;"></canvas>
+                        </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </div>
     </div>
 

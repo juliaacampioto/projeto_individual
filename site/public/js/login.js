@@ -39,6 +39,8 @@ function entrar() {
 
         } else {
 
+            div_erro.innerHTML = `Insira um e-mail válido`
+
             console.log("Houve um erro ao tentar realizar o login!");
 
             resposta.text().then(texto => {
