@@ -11,15 +11,17 @@
 </head>
 
 <body>
-
-    <!-- <div class="container_menu">
-        <div class="menu">
-            <ul class="menu-list"> <br>
-                <li><a href="#">DASHBOARD</a></li> <br>
-                <li><a href="#">INSERIR DADOS</a></li> <br>
-                <li><a href="#">SAIR</a></li>
-            </ul>
-        </div> -->
+    <div class="tudo">
+        <!-- <div class="tudo1"> -->
+        <div class="container_menu">
+            <div class="menu">
+                <ul class="menu-list"> <br>
+                    <li><a href="#">DASHBOARD</a></li> <br>
+                    <li><a href="#">INSERIR DADOS</a></li> <br>
+                    <li><a href="index.html">SAIR</a></li>
+                </ul>
+            </div>
+        </div>
         <div class="container_dash">
             <h1>Seja bem-vindo à sua dashboard!</h1> <br> <br>
             <h2>Métricas</h2> <br>
@@ -28,11 +30,11 @@
                     <div class="classificacao_metrica"><b>
                             Desempenho do leitor</b>
                     </div>
-                        <div class="classificacao_metrica_muito_ruim">
-                            <div class="colocar_baixo">
-                                Muito ruim
-                            </div>
+                    <div class="classificacao_metrica_muito_ruim">
+                        <div class="colocar_baixo">
+                            Muito ruim
                         </div>
+                    </div>
                     <div class="classificacao_metrica_ruim">
                         <div class="colocar_baixo">
                             Ruim </div>
@@ -76,21 +78,31 @@
                     </div>
                 </div>
             </div>
+
+            <!-- </div> -->
+            <!-- <div class="container_dash">     -->
+            <div class="banner2">
+                <h2>Livros lidos por ano</h2><br>
+                <div class="kpi">
+                    <div class="kpis">
+                    <div class="imagem_placa"> <div class="kpi_texto">Ano que mais leu</div>
+                    <div class="kpi_texto">Ano que menos leu</div>
+                    </div>
+                    <div class="imagem_placa"> <div class="kpi_texto">2020</div>
+                    <div class="kpi_texto">2023</div>
+                    </div>
+                </div>
+                    <div class="tudo_metrica2">
+                        <div>
+                            <canvas id="myChart2" style="position: relative; height: 40vh; width: 40vw;"></canvas>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- </div> -->
         </div>
     </div>
-<div class="container_dash">    
-    <div class="banner2">
-    <h2>Livros lidos por ano</h2><br>7
-    <div></div>
-    <div class="tudo_metrica2">
-
-    <div>
-        <canvas id="myChart2"  style="position: relative; height: 40vh; width: 40vw;"></canvas>
-    </div> </div>
-
-</div>
-</div>
-
 
     <script src="js/dashboard.js"></script>
 </body>

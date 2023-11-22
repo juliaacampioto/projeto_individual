@@ -1,11 +1,24 @@
-/* .container_menu {
+.tudo{
+    border: solid 5px lawngreen;
     display: flex;
+}
+
+/* .tudo1{
+    border: solid 5px navajowhite;
+    display: flex;
+} */
+
+.container_menu {
+    display: flex;
+    border: solid 5px tan;
+    width: 14%;
 }
 
 .container_menu .menu {
     width: 200px;
     background-color: plum;
-    height: 1000px;
+    border: solid 5px firebrick;
+    height: 100%
 }   
 
 .container_menu .menu .menu-list {
@@ -23,12 +36,15 @@
 .container_menu .menu .menu-list a {
     font-family: 'Courier New', Courier, monospace;
     color: black;
-} */
+}
 
 .container_dash {
-    flex: 1;
+    /* flex: 1;
     padding: 20px;
-    border: solid 5px firebrick;    
+    width: 70%; */
+    border: solid 5px firebrick;   
+    width: 86%;
+
 }
 
 .container_dash h1{
@@ -37,16 +53,9 @@
 }
 
 .tudo_metrica{
-    border: solid 5px royalblue;
+    /* border: solid 5px royalblue; */
     margin-left: 50px;
     margin-right: 50px;
-}
-
-.tudo_metrica2{
-    border: solid 5px royalblue;
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 50%;
 }
 
 .container_dash .classificacao{
@@ -70,7 +79,7 @@
 }
 
 .classificacao_metrica_muito_ruim{
-    background-color: darkorchid;
+    background-color: rgba(146, 45, 146, 0.696);
     padding-top: 5px;
     padding-block-end: 5px;
     border:  solid 3px black;
@@ -130,14 +139,15 @@
 }
 
 .colocar_baixo{
-    border: solid 5px hotpink;
+    /* border: solid 5px hotpink; */
     margin-top: 10px;
     margin-block-end: 10px;
 }
 
-.muito_ruim{
-    background-color: darkorchid;
-}
+/* .muito_ruim{
+    background-color: black;
+    border: solid 5px firebrick;
+} */
 
 h2{
     border: solid 5px lawngreen;
@@ -148,4 +158,48 @@ h2{
     border: solid 5px darkblue;
     margin-left: 50px;
     margin-right: 50px;
+    margin-top: 40px;
+}
+
+.tudo_metrica2{
+    border: solid 5px royalblue;
+    /* margin-left: 50px;
+    margin-right: 50px; */
+    width: 40%;
+    /* margin-left: 55%; */
+}
+
+.kpi{
+    border: solid 5px gray;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagem_placa{
+    /* border: solid 5px magenta; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    background-color: plum;
+    display: flex;
+    width: 80%;
+    /* justify-content: center;
+    display: flex; */
+    /* width: 50%;
+    height: 50px; */
+    /* height: 500px; */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    /* margin-right: 50%; */
+}
+
+.kpi_texto{
+    border: solid 3px black;
+    text-align: center;
+    width: 50%;
+    /* width: 35%; */
+}
+
+.kpis{
+    width: 50%;
+    border: solid 5px tan;
 }

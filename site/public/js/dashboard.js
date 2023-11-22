@@ -13,8 +13,8 @@ const data2 = {
     datasets: [
     {
         label: 'Quantidade de livros',
-        backgroundColor: 'rgb	(221,160,221) ',
-        borderColor: 'rgb	(221,160,221) ',
+        backgroundColor: ['rgb(221,160,221) '],
+        borderColor: ['rgb(221,160,221) '],
         data: [15, 5, 20, 10, 8, 1],
     }
     ]
