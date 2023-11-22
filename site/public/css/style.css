@@ -91,11 +91,12 @@ li {
 }
 
 .header .container .cadastrar a {
-    /* width: 20%; */
     border: solid 5px lavender;
     border-radius: 30px;
     background-color: lavender;
+    display: block; /* Garante que a transição se aplique corretamente */
 }
+
 
 .banner {
     display: flex;
@@ -315,12 +316,15 @@ li {
 }
 
 .banner .container3 .texto {
+    border: solid 5px rebeccapurple;
     display: flex;
     gap: 15px;
+    margin-left: 40px;
+    margin-right: 50px;
 }
 
 .banner .container3 .texto .imagem_eu {
-    width: 17%;
+    width: 20%;
     margin-left: 10px;
 }
 
@@ -328,6 +332,7 @@ li {
     text-align: justify;
     width: 78%;
     font-family: 'Courier New', Courier, monospace;
+    border: solid 5px gold;
 }
 
 .footer {
@@ -412,4 +417,32 @@ li {
 .texto_ods4 {
     display: flex;
     margin-top: 10px;
+}
+
+.saiba_mais{
+    border: solid 5px gainsboro;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.pequeno_titulo .cadastrar a{
+    border: solid 5px lavender;
+    background-color: lavender;
+    border-radius: 20px;
+ text-shadow: 1px 1px 1px;   
+ animation: blink 1s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

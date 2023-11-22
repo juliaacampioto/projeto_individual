@@ -1,7 +1,151 @@
-.logo img{
-    width: 40%;
+/* .container_menu {
+    display: flex;
 }
 
-.logo h1{
+.container_menu .menu {
+    width: 200px;
+    background-color: plum;
+    height: 1000px;
+}   
+
+.container_menu .menu .menu-list {
+    list-style: none;
+    padding: 0;
+    display: inline;
+}
+
+.container_menu .menu .menu-list li {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    padding-block-end: 20px;
+}
+
+.container_menu .menu .menu-list a {
+    font-family: 'Courier New', Courier, monospace;
     color: black;
+} */
+
+.container_dash {
+    flex: 1;
+    padding: 20px;
+    border: solid 5px firebrick;    
+}
+
+.container_dash h1{
+    border: solid 5px gainsboro;
+    text-align: center;
+}
+
+.tudo_metrica{
+    border: solid 5px royalblue;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.tudo_metrica2{
+    border: solid 5px royalblue;
+    margin-left: 50px;
+    margin-right: 50px;
+    width: 50%;
+}
+
+.container_dash .classificacao{
+    display: flex;
+    text-align: center; 
+}
+
+.container_dash .classificacao2{
+    display: flex;
+    text-align: center; 
+}
+
+.classificacao_metrica{
+    padding-top: 7px;
+    padding-block-end: 5px;
+    border:  solid 3px black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    width: 20%;
+    background-color: white;
+}
+
+.classificacao_metrica_muito_ruim{
+    background-color: darkorchid;
+    padding-top: 5px;
+    padding-block-end: 5px;
+    border:  solid 3px black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    width: 20%;
+}
+
+.classificacao_metrica_ruim{
+    background-color: palevioletred;
+    padding-top: 5px;
+    padding-block-end: 5px;
+    border:  solid 3px black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    width: 20%;
+}
+
+.classificacao_metrica_mediano{
+    background-color: plum;
+    padding-top: 5px;
+    padding-block-end: 5px;
+    border:  solid 3px black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    width: 20%;
+}
+
+.classificacao_metrica_bom{
+    background-color: pink;
+    padding-top: 5px;
+    padding-block-end: 5px;
+    border:  solid 3px black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    width: 20%;
+}
+
+.classificacao_metrica_muito_bom{
+    background-color: #e5dad8;
+    padding-top: 5px;
+    padding-block-end: 5px;
+    border:  solid 3px black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    width: 20%;
+}
+
+.classificacao_metrica2{
+    background-color: white;
+    border:  solid 3px black;
+    padding-block-end: 5px;
+    padding-top: 7px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 19px;
+    width: 20%;
+}
+
+.colocar_baixo{
+    border: solid 5px hotpink;
+    margin-top: 10px;
+    margin-block-end: 10px;
+}
+
+.muito_ruim{
+    background-color: darkorchid;
+}
+
+h2{
+    border: solid 5px lawngreen;
+    text-align: center;
+}
+
+.banner2{
+    border: solid 5px darkblue;
+    margin-left: 50px;
+    margin-right: 50px;
 }

@@ -68,19 +68,24 @@ input:focus {
     padding: 5px;
 }
 
-.banner_login .container_login2 .campos_login button {
-    background-color: #e5dad8;
-    cursor: pointer;
-    width: 18%;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 19px;
-    font-weight: bolder;
-    padding-top: 4px;
-    padding-block-end: 4px;
-}
-
 .emails {
     border: solid 5px firebrick;
     display: flex;
     justify-content: center;
 }
+
+.button {
+    background-color: #e5dad8;
+    cursor: pointer;
+    width: 23%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: bolder;
+    padding-top: 4px;
+    padding-block-end: 4px;
+    transition: background-color 0.3s;
+  }
+  
+   .button:hover {
+    background-color: #b7a89c; 
+  }
