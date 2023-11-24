@@ -69,14 +69,32 @@ ul {
     display: flex;
     width: 100%;
     justify-content: space-evenly;
+    /* border: solid 5px khaki; */
 }
 
 li {
     display: flex;
+    /* border: solid 5px hotpink; */
+    position: relative;
     align-items: center;
     gap: 5px;
     text-shadow: 1px 1px 1px;
     font-family: 'Courier New', Courier, monospace;
+}
+
+li::after{
+    content: " ";
+    width: 0%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+li:hover::after{
+    width: 100%;
 }
 
 .header .container .cadastrar {

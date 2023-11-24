@@ -6,7 +6,6 @@ input:focus {
 
 .home_login {
     border-radius: 15px;
-    border: solid 3px black;
     padding-top: 5px;
     padding-block-end: 5px;
     padding-left: 20px;
@@ -16,7 +15,6 @@ input:focus {
 
 .banner_login {
     padding-top: 100px;
-    border: solid 5px hotpink;
     display: flex;
     justify-content: center;
 }
@@ -25,20 +23,17 @@ input:focus {
     width: 55%;
     background-repeat: no-repeat;
     height: 730px;
-    border: solid 5px gold;
     justify-content: center;
     display: flex;
     align-items: center;
 }
 
 .banner_login .container_login2 .campos_login {
-    border: solid 5px olive;
     width: 60%;
     height: 300px;
 }
 
 .banner_login .container_login2 .campos_login .botao {
-    border: solid 5px green;
     display: flex;
     justify-content: center;
     margin-top: 20px;
@@ -54,13 +49,11 @@ input:focus {
 }
 
 .login_email {
-    border: solid 5px hotpink;
     font-size: 19px;
     font-family: 'Courier New', Courier, monospace;
 }
 
 .input {
-    border: solid 0.5px black;
     border-radius: 20px;
     margin-left: 10px;
     margin-top: 4px;
@@ -69,7 +62,6 @@ input:focus {
 }
 
 .emails {
-    border: solid 5px firebrick;
     display: flex;
     justify-content: center;
 }

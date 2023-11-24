@@ -39,6 +39,7 @@ overflow-x: hidden;
 }
 
 .container_menu .menu .menu-list a {
+    cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
     color: black;
 }
@@ -264,7 +265,7 @@ h2{
 }
 
 .mostrar .mostrar_entrar .inserir {
-    border: solid 5px navy;
+    cursor: pointer;
 }
 
 .mostrar.abrir{

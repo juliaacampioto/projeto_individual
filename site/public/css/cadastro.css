@@ -1,8 +1,8 @@
 .banner_login .container_login2 .campos_login2{
-  border: solid 5px olive;
   width: 80%;
   height: 65%;
   margin-left: 10px;
+  margin-top: 70px;
 }
 
 .sobrenome{
@@ -24,7 +24,6 @@
 }
 
 .input2{
-  border: solid 0.5px black;
   border-radius: 20px;
   margin-left: 10px;
   margin-top: 4px;
@@ -50,14 +49,12 @@
 
 
 .banner_login .container_login2 .campos_login2 .botao2{
-  border: solid 5px green;
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
 .erro{
-  border: solid 5px gold;
   font-family: 'Courier New', Courier, monospace;
   font-size: 19px;
   color: red  ;

@@ -35,7 +35,12 @@
             <option value="poesia">Poesia</option>
            </select> 
            <br> <br> Autor(a): <input type="text" id="input_autor">
-           <br> <br> Data de início: <input type="text" id="input_data_inicio"> <br> <br> <button onclick="registrarlivro()">Registrar livro</button>
+           <br> <br> Data de início: <input type="text" id="input_data_inicio"> <br> <br> <button onclick="registrarLivro()">Registrar livro</button>
+
+
+           <div id="div_teste"></div>
+
+
            </div>
         </div>
         </div>
@@ -221,3 +226,14 @@
 </body>
 
 </html>
+
+<script>
+    function registrarLivro(){
+var nome = id_nome_do_livro.value;
+var genero = select_genero.value;
+var autor = input_autor.value;
+var dtInicio = input_data_inicio.value;
+
+    div_teste.innerHTML = `oiiii mundo`;
+}
+</script>

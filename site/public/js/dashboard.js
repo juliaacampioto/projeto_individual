@@ -1,6 +1,6 @@
 var nome = sessionStorage.NOME_USUARIO; 
 
-titulo.innerHTML = `Olá, ${nome}! <br> Aqui está a sua dashboard:`; 
+titulo.innerHTML = `Olá, ${nome}! <br> Aqui está a sua dashboard`; 
 
 const labels2 = [
     '2018', 
