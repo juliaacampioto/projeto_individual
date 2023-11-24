@@ -3,7 +3,7 @@ var router = express.Router();
 
 var livroController = require("../controllers/livroController");
 
-router.post("/livro", function (req, res) {
+router.post("/registrarLivro", function (req, res) {
     livroController.registrarLivro(req, res);
 });
 

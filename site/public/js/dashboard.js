@@ -1,23 +1,20 @@
 var nome = sessionStorage.NOME_USUARIO; 
 
-titulo.innerHTML = `Olá, ${nome}! <br> Aqui está a sua dashboard`; 
+titulo.innerHTML = `Olá, ${nome}! <br> Aqui está a sua dashboard:`; 
 
 const labels2 = [
-    '2018', 
-    '2019',
-    '2020',
-    '2021',
-    '2022',
-    '2023',
-
+    'Romance', 
+    'Ficção',
+    'Ação',
+    'Poesia',
 ];
 
 const data2 = {
     labels: labels2,
     datasets: [
     {
-        label: 'Quantidade de livros',
-        backgroundColor: ['rgb(198,35,104) '],
+        label: 'Gêneros lidos',
+        backgroundColor: ['plum'],
         borderColor: ['rgb(198,35,104) '],
         data: [15, 5, 20, 10, 8, 1],
     }
@@ -48,34 +45,6 @@ const labels = [
     '2023',
 
 ];
-
-const data = {
-    labels: labels,
-    datasets: [
-    {
-        label: 'Quantidade de livros',
-        backgroundColor: ['rgb(198,35,104) '],
-        borderColor: ['rgb(198,35,104) '],
-        data: [15, 5, 20, 10, 8, 1],
-    }
-    ]
-};
-
-
-const config = {
-    type: 'bar',
-    data: data,
-    options: {}
-};
-
-const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-);
-
-
-
-
 
 const labels3 = [
     'Romance', 
