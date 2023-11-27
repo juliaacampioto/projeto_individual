@@ -5,9 +5,7 @@ function registrarLivro(req, res) {
     var genero = req.body.generoServer;
     var autor = req.body.autorServer;
     var dtInicio = req.body.dtinicioServer;
-    var fkCadastro = req.body.fkCadastroServer;
-
-    // var fkCadastro = req.body.fkCadastro;
+    var fkUsuario = req.body.fkUsuarioServer;
 
     if (nomeLivro == undefined) {
         res.status(400).send("O nome do livro está undefined!");
@@ -21,18 +19,118 @@ function registrarLivro(req, res) {
     if (dtInicio == undefined) {
         res.status(400).send("A data de início está undefined!");
     }
-    if (fkCadastro == undefined) {
-        res.status(400).send("A fkCadastro está undefined!");
+    if (fkUsuario == undefined) {
+        res.status(400).send("A fkUsuario está undefined!");
     }
 
 
-    livroModel.registrarLivro(nomeLivro, genero, autor, dtInicio, fkCadastro).then(function(resposta){
+    livroModel.registrarLivro(nomeLivro, genero, autor, dtInicio, fkUsuario).then(function(resposta){
         res.status(200).send("Dados inserido com sucesso");
     }).catch(function(erro){
         res.status(500).json(erro.sqlMessage);
     })
 }
 
+function listarLivro(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    console.log(`estou na funcao listar qtd diario do controller`);
+    livroModel.listarLivro(idUsuario)
+        .then(
+            function (resultado) {
+                if (resultado.length > 0) {
+                    res.status(200).json(resultado);
+
+                } else {
+                    res.status(204).send("Nenhum resultado encontrado!");
+                }
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "Houve um erro ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+function buscarLivro(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    livroModel.buscarLivro(idUsuario)
+        .then(
+            function (resultado) {                
+                if (resultado.length > 0) {
+                    res.status(200).json(resultado);
+                } else {
+                    res.status(204).send("Nenhum resultado encontrado!");
+                }
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "Houve um erro",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
+function ultimoLivro(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    livroModel.ultimoLivro(idUsuario).then((resposta) => {
+        res.status(200).json(resposta);
+    });
+
+}
+
+function ultimaData(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    livroModel.ultimaData(idUsuario).then((resposta) => {
+        res.status(200).json(resposta);
+    });
+
+}
+
+// function relembrarLeituras(req, res) {
+//     var idUsuario = req.params.idUsuario;
+
+//     livroModel.ultimoLivro(idUsuario)
+//         .then(
+//             function (resultado) {                
+//                 if (resultado.length > 0) {
+//                     res.status(200).json(resultado);
+//                 } else {
+//                     res.status(204).send("Nenhum resultado encontrado!");
+//                 }
+//             }
+//         )
+//         .catch(
+//             function (erro) {
+//                 console.log(erro);
+//                 console.log(
+//                     "Houve um erro",
+//                     erro.sqlMessage
+//                 );
+//                 res.status(500).json(erro.sqlMessage);
+//             }
+//         );
+// }
+
+
 module.exports = {
-    registrarLivro
+    registrarLivro,
+    listarLivro,
+    buscarLivro,
+    ultimoLivro,
+    ultimaData
 }

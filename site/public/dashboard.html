@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="icon" href="assets/favicon/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/dashboard.js">
     <title>Book's Club - Dashboard</title>
 </head>
 
@@ -18,7 +19,7 @@
                 <ul class="menu-list"> <br>
                     <li><a href="#">DASHBOARD</a></li> <br>
                     <li><a onclick="abrir_dados()">INSERIR LIVRO</a></li> <br>
-                    <li><a href="#">RESPONDER PERGUNTAS</a></li> <br>
+                    <li><a onclick="abrir_dados2()">PREFERÊNCIAS</a></li> <br>
                     <li><a href="index.html">SAIR</a></li>
                 </ul>
             </div>
@@ -29,21 +30,38 @@
         <div id="div_mostrar" class="mostrar">
             <div class="mostrar_dentro">
                 <button class="x" id="fechar">X</button>
-                <div class="inserir"> <div class="inserir_livro"> <b class="pergunta_principal"> Começou a ler um livro? </b> <br> <br>Nome do livro: <input type="text"
+                <div class="inserir"> <div class="inserir_livro"> <b class="pergunta_principal"> Começou a ler um livro? </b> <br> <br>Nome do livro: <input class="input_livros" type="text"
                         id="id_nome_do_livro"> <br> <br> Gênero: <select name="" id="select_genero">
                         <option value="romance">Romance</option>
                         <option value="ficcao">Ficção</option>
                         <option value="acao">Ação</option>
                         <option value="poesia">Poesia</option>
                     </select>
-                    <br> <br> Autor(a): <input type="text" id="input_autor">
-                    <br> <br> Data de início: <input type="text" id="input_data_inicio"> <br> <br> <div class="botao_registrar"> <button
+                    <br> <br> Autor(a): <input class="input_livros" type="text" id="input_autor">
+                    <br> <br> Data de início: <input class="input_livros" type="text" id="input_data_inicio"> <br> <br> <div class="botao_registrar"> <button
                         onclick="registrarLivro()">Registrar livro</button></div>
                     </div>
+                </div>
+            </div>
+        </div>
 
-                    <div id="div_teste"></div>
 
 
+
+        <div id="div_mostrar2" class="mostrar">
+            <div class="mostrar_dentro">
+                <button class="x" id="fechar2">X</button>
+                <div class="inserir"> <div class="inserir_livro"> <b class="pergunta_principal2"> Suas preferências </b> <br> <br>Qual seu livro preferido?  <input class="input_livros2" type="text"
+                        id="id_livro_fav"> <br> <br> Qual seu gênero preferido? <select name="" id="select_genero_fav">
+                        <option value="romance">Romance</option>
+                        <option value="ficcao">Ficção</option>
+                        <option value="acao">Ação</option>
+                        <option value="poesia">Poesia</option>
+                    </select>
+                    <br> <br> Qual seu autor preferido? <input class="input_livros2" type="text" id="input_autor_fav">
+                    <br> <br> <div class="botao_registrar"> <button
+                        onclick="registrarPreferencia()">Registrar preferências</button></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -66,10 +84,10 @@
             <div class="tudo_metrica">
                 <div class="classificacao">
                     <div id="div_livro_lendo" class="classificacao_metrica">
-                        kskss
+                    
                     </div>
-                    <div class="classificacao_metrica">
-                        ksks
+                    <div id="div_data_lendo" class="classificacao_metrica">
+                        
                     </div>
                 </div>
             </div>
@@ -145,11 +163,14 @@
                             <div class="kpi_texto">mss</div>
                         </div>
                     </div> <br>
-                    <div class="caracteristica">Você é sksl ! Mudar a cor também</div>
+                    <div id="div_caracteristica" class="caracteristica"> 
+                        <div id="div_classificacao" class="div_classificacao"></div>
+                        Você é sksl ! Mudar a cor também
+                    </div>
                 </div>
                 <div class="tudo_metrica2">
                     <div>
-                        <canvas id="myChart2" style="position: relative; height: 40vh; width: 40vw;"></canvas>
+                        <canvas id="myChart" style="position: relative; height: 40vh; width: 40vw;"></canvas>
                     </div>
                 </div>
             </div>
@@ -284,7 +305,7 @@
                     generoServer: genero,
                     autorServer: autor,
                     dtinicioServer: dtInicio,
-                    fkCadastroServer: idUsuario
+                    fkUsuarioServer: idUsuario
                 }),
             })
                 .then(function (resposta) {
