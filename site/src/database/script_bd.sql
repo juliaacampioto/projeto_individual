@@ -36,6 +36,6 @@ fkCadastroPerg int,
 constraint fkCadastroPerg foreign key (fkCadastroPerg) references cadastro(idCadastro)) auto_increment = 300; 
 
 select * from cadastro;	
-select * from livro_novo;	
+select * from livro_novo;
 select * from preferencias;	
 select * from perguntas;	

@@ -1,4 +1,5 @@
 var nome = sessionStorage.NOME_USUARIO; 
+// var ultimoLivro = sessionStorage.ULTIMO_LIVRO;
 
 titulo.innerHTML = `Olá, ${nome}! <br> Aqui está a sua dashboard:`; 
 
@@ -57,7 +58,7 @@ const data3 = {
     labels: labels3,
     datasets: [
         {
-            backgroundColor: ['rgb(198,35,104)', 'rgb(255,99,132)', 'rgb(255,205,86)', 'rgb(75,192,192)', 'rgb(54,162,235)', 'rgb(153,102,255)'],
+            backgroundColor: ['rgba(146, 45, 146, 0.696)', 'rgb(199, 83, 122)', 'rgb(216, 140, 152)', 'rgb(226, 97, 196)'],
             borderColor: 'black', // Adicionando uma borda branca para separar as fatias
             borderWidth: 3, // Espessura da borda
             data: [20, 10, 50, 20],
