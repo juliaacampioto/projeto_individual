@@ -24,7 +24,7 @@ function listarLivro() {
                     var qtdTotal = document.getElementById("div_classificacao")
                     qtdTotal.innerHTML = `<b>${qtsLivros}</b>`;
 
-                    if (qtsLivros == 1) {
+                    if (qtdLivros == 1) {
                         div_caracteristica.innerHTML = `<h2><b>Damon</b></h2> <span class="descricaoPerfil"> Seus diários são tão frequentes quanto os de um Damon produtivo. Continue a escrever com essa cadência... ou não, afinal, um pouco de mistério não faz mal, certo? </span>`;
                     } else if (qtsLivros == 16) {
                         div_caracteristica.innerHTML = `<h2><b>Katherine</b></h2> <span class="descricaoPerfil">Parece que você está seguindo os passos de uma verdadeira Katherine, guardando segredos tão bem quanto ela. Continue a escrever, mas lembre-se, sempre é bom ter um truque na manga.</span>`;
@@ -88,7 +88,11 @@ function buscarLivro() {
                 options: {
                     scales: {
                         y: {
-                            beginAtZero: true
+                            beginAtZero: true,
+                            ticks: {
+                                stepSize: 1,
+                                precision: 0
+                            }
                         }
                     }
                 }
@@ -133,6 +137,27 @@ function ultimoLivro(){
                     });
                 });
             });
+        }
+
+        function relembrarLeituras(){
+            div_relembrar.innerHTML = ``;
+            var contador = 0;
+            fetch(`/livro/relembrarLeituras/${idUsuario}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            })
+                .then(function (resposta) {
+                    resposta.json().then((resposta) => {
+                        resposta.forEach((resposta) => {
+                            if (resposta.nomeLivro && resposta.autor) {
+                                contador++;
+                                div_relembrar.innerHTML += `<br><b>Livro ${contador} - </b>${resposta.nomeLivro} - ${resposta.autor}<br>`;
+                            }
+                        });
+                    });
+                });
         }
     
 

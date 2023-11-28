@@ -45,7 +45,7 @@ function ultimoLivro(idUsuario) {
 }
 
 function ultimaData(idUsuario) {
-    console.log("ACESSEI O LIVRO MODEL para buscar a data que o usuário começou a ler, function ultimoLivro()", idUsuario);
+    console.log("ACESSEI O LIVRO MODEL para buscar a data que o usuário começou a ler, function ultimaData()", idUsuario);
 
     var instrucao = `   
     select dtInicio from livro_novo where fkUsuario = ${idUsuario} order by idLivroNovo desc limit 1
@@ -55,21 +55,21 @@ function ultimaData(idUsuario) {
     return database.executar(instrucao);
 }
 
-// function relembrarLeituras(idUsuario) {
-//     console.log("ACESSEI O LIVRO MODEL para buscar o livro que o usuário está lendo, function ultimoLivro()", idUsuario);
+function relembrarLeituras(idUsuario) {
+    console.log("ACESSEI O LIVRO MODEL para buscar o livro que o usuário está lendo, function relembrarLeituras()", idUsuario);
 
-//     var instrucao = `   
-//     select nomeLivro, dtInicio from livro_novo where fkUsuario = ${idUsuario}`;
+    var instrucao = `   
+    select  nomeLivro, autor from livro_novo where fkUsuario = ${idUsuario}`;
 
-//     console.log("Executando a instrução SQL: \n" + instrucao);
-//     return database.executar(instrucao);
-// }
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
 
 module.exports = {
     registrarLivro,
     listarLivro,
     buscarLivro, 
     ultimoLivro,
-    ultimaData
-    // relembrarLeituras
+    ultimaData,
+    relembrarLeituras
 };

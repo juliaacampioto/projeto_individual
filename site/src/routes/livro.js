@@ -23,9 +23,9 @@ router.get("/ultimaData/:idUsuario", function (req, res) {
     livroController.ultimaData(req, res);
 });
 
-// router.get("/relembrarLeituras/:idUsuario", function (req, res) {
-//     livroController.relembrarLeituras(req, res);
-// });
+router.get("/relembrarLeituras/:idUsuario", function (req, res) {
+    livroController.relembrarLeituras(req, res);
+});
 
 
 module.exports = router;

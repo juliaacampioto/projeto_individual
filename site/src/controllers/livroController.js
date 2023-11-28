@@ -34,7 +34,7 @@ function registrarLivro(req, res) {
 function listarLivro(req, res) {
     var idUsuario = req.params.idUsuario;
 
-    console.log(`estou na funcao listar qtd diario do controller`);
+    console.log(`estou na funcao listar quantidade de livros do controller`);
     livroModel.listarLivro(idUsuario)
         .then(
             function (resultado) {
@@ -101,30 +101,30 @@ function ultimaData(req, res) {
 
 }
 
-// function relembrarLeituras(req, res) {
-//     var idUsuario = req.params.idUsuario;
+function relembrarLeituras(req, res) {
+    var idUsuario = req.params.idUsuario;
 
-//     livroModel.ultimoLivro(idUsuario)
-//         .then(
-//             function (resultado) {                
-//                 if (resultado.length > 0) {
-//                     res.status(200).json(resultado);
-//                 } else {
-//                     res.status(204).send("Nenhum resultado encontrado!");
-//                 }
-//             }
-//         )
-//         .catch(
-//             function (erro) {
-//                 console.log(erro);
-//                 console.log(
-//                     "Houve um erro",
-//                     erro.sqlMessage
-//                 );
-//                 res.status(500).json(erro.sqlMessage);
-//             }
-//         );
-// }
+    livroModel.relembrarLeituras(idUsuario)
+        .then(
+            function (resultado) {                
+                if (resultado.length > 0) {
+                    res.status(200).json(resultado);
+                } else {
+                    res.status(204).send("Nenhum resultado encontrado!");
+                }
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "Houve um erro",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
 
 
 module.exports = {
@@ -132,5 +132,6 @@ module.exports = {
     listarLivro,
     buscarLivro,
     ultimoLivro,
-    ultimaData
+    ultimaData,
+    relembrarLeituras
 }
