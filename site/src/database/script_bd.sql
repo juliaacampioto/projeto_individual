@@ -23,6 +23,7 @@ idPreferencias int primary key auto_increment,
 livro varchar(40),
 autor varchar(50),
 genero varchar(10),
+meta int,
 fkUsuarioPref int,
 constraint fkUsuarioPref foreign key (fkUsuarioPref) references cadastro(idUsuario)) auto_increment = 200;
 
@@ -50,4 +51,6 @@ SELECT COUNT(idLivroNovo) AS qtd, MONTH(dtInicio) AS mes
     AND dtInicio BETWEEN '2023-01-01' AND '2023-12-31' 
     GROUP BY mes order by month(dtInicio);
     
-    select dtInicio from livro_novo where fkUsuario = 1 order by idLivroNovo desc limit 1
+    select dtInicio from livro_novo where fkUsuario = 1 order by idLivroNovo desc limit 1;
+    
+    select nomeLivro, autor, sum(idLivroNovo) from livro_novo where fkUsuario = 1 group by nomeLivro, autor;

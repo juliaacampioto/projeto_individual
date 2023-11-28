@@ -24,15 +24,17 @@ function listarLivro() {
                     var qtdTotal = document.getElementById("div_classificacao")
                     qtdTotal.innerHTML = `<b>${qtsLivros}</b>`;
 
-                    if (qtdLivros == 1) {
-                        div_caracteristica.innerHTML = `<h2><b>Damon</b></h2> <span class="descricaoPerfil"> Seus diários são tão frequentes quanto os de um Damon produtivo. Continue a escrever com essa cadência... ou não, afinal, um pouco de mistério não faz mal, certo? </span>`;
-                    } else if (qtsLivros == 16) {
-                        div_caracteristica.innerHTML = `<h2><b>Katherine</b></h2> <span class="descricaoPerfil">Parece que você está seguindo os passos de uma verdadeira Katherine, guardando segredos tão bem quanto ela. Continue a escrever, mas lembre-se, sempre é bom ter um truque na manga.</span>`;
-                    } else if (qtsLivros <= 24) {
-                        div_caracteristica.innerHTML = `<h2><b>Elena</b></h2> <span class="descricaoPerfil">Você está compartilhando suas aventuras de forma cativante. Continue registrando suas descobertas e vivências</span>`;
-                    } else if (qtsLivros > 24) {
-                        div_caracteristica.innerHTML = `<h2><b>Damon</b></h2> <span class="descricaoPerfil">Seus diários são uma prova do compromisso, tão regulares quanto os de um Stefan que documentava cada detalhe. Continue escrevendo, mostrando sua dedicação à narrativa da sua vida. </span>`;
-                    } else { console.log(`Erro ao capturar perfil... valor da variavel ${qtsLivros}`) }
+                    if (qtsLivros <= 5) {
+                        div_caracteristica.innerHTML = `Você é um <b style="color:  rgba(146, 45, 146, 0.696);">leitor limitado</b>! <br> Precisa de mais foco para ampliar a sua leitura!`;
+                    } else if (qtsLivros <= 10) {
+                        div_caracteristica.innerHTML = `Você é um <b style="color:  rgb(199, 83, 122);">leitor casual</b>! <br> Está lendo menos livros do que deveria!`;
+                    } else if (qtsLivros <= 15) {
+                        div_caracteristica.innerHTML = `Você é um <b style="color:   rgb(216, 140, 152);">leitor consistente</b>! <br> A leitura está no seu cotidiano, mas você pode melhorar!`;
+                    } else if (qtsLivros <= 20) {
+                        div_caracteristica.innerHTML = `Você é um <b style="color:   rgb(216, 140, 152);">leitor dedicado</b>! <br> A leitura está no seu cotidiano, mas você pode melhorar!`;
+                    } else {
+                        div_caracteristica.innerHTML = `<h2><b>Damon</b></h2> <span class="descricaoPerfil">Seus diários são uma prova do compromisso, tão regulares quanto os de um Stefan que documentava cada detalhe. Continue escrevendo, mostrando sua dedicação à narrativa da sua vida. </span>`;}
+                    // } else { console.log(`Erro ao capturar perfil... valor da variavel ${qtsLivros}`) }
                 })
         })
 
