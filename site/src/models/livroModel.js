@@ -22,11 +22,7 @@ function buscarLivro(idUsuario) {
     console.log("ACESSEI O LIVRO MODEL para buscar quantidade de livros lidos por mês, function buscarLivros()", idUsuario);
 
     var instrucao = `   
-    SELECT COUNT(idLivroNovo) AS qtd, MONTH(dtInicio) AS mes 
-    FROM livro_novo 
-    WHERE fkUsuario = ${idUsuario}  
-    AND dtInicio BETWEEN '2023-01-01' AND '2023-12-31' 
-    GROUP BY mes order by month(dtInicio)
+    SELECT COUNT(idLivroNovo) AS qtd, MONTH(dtInicio) AS mes FROM livro_novo WHERE fkUsuario = ${idUsuario} AND dtInicio BETWEEN '2023-01-01' AND '2023-12-31' GROUP BY mes order by month(dtInicio)
     `;
 
     console.log("Executando a instrução SQL: \n" + instrucao);
@@ -65,11 +61,44 @@ function relembrarLeituras(idUsuario) {
     return database.executar(instrucao);
 }
 
+function livroFav(livro, autor, genero, fkUsuarioPref) {
+    console.log("PREFERÊNCIAS REGISTRADAS COM SUCESSO! \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function registrarLivro()", livro, autor, genero, fkUsuarioPref);
+    var instrucao = `
+        INSERT INTO preferencias (livro, autor, genero, fkUsuarioPref) VALUES ('${livro}', '${autor}', '${genero}', '${fkUsuarioPref}');
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function mostrarLivroFav(idUsuario) {
+    console.log("ACESSEI O LIVRO MODEL para buscar o livro favorito, function mostrarLivroFav()", idUsuario);
+
+    var instrucao = `   
+    select livro from preferencias where fkUsuarioPref = ${idUsuario};	
+    `;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function mostrarAutorFav(idUsuario) {
+    console.log("ACESSEI O LIVRO MODEL para buscar o autor preferido do usuário, function mostrarAutorFav()", idUsuario);
+
+    var instrucao = `   
+    select autor from preferencias where fkUsuarioPref = ${idUsuario};`;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     registrarLivro,
     listarLivro,
     buscarLivro, 
     ultimoLivro,
     ultimaData,
-    relembrarLeituras
+    relembrarLeituras,
+    livroFav,
+    mostrarLivroFav,
+    mostrarAutorFav
 };

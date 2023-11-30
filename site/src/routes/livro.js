@@ -27,5 +27,16 @@ router.get("/relembrarLeituras/:idUsuario", function (req, res) {
     livroController.relembrarLeituras(req, res);
 });
 
+router.post("/livroFav", function (req, res) {
+    livroController.livroFav(req, res);
+});
+
+router.get("/mostrarLivroFav/:idUsuario", function (req, res) {
+    livroController.mostrarLivroFav(req, res);
+});
+
+router.get("/mostrarAutorFav/:idUsuario", function (req, res) {
+    livroController.mostrarAutorFav(req, res);
+});
 
 module.exports = router;

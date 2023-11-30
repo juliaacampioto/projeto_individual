@@ -126,6 +126,49 @@ function relembrarLeituras(req, res) {
         );
 }
 
+function livroFav(req, res) {
+    var livro = req.body.livroServer;
+    var autor = req.body.autorServer;
+    var genero = req.body.generoServer;
+    var fkUsuario = req.body.fkUsuarioServer;
+
+    if (livro == undefined) {
+        res.status(400).send("O nome do livro está undefined!");
+    }
+    if (autor == undefined) {
+        res.status(400).send("O autor está undefined!");
+    }
+    if (genero == undefined) {
+        res.status(400).send("O gênero está undefined!");
+    }
+    if (fkUsuario == undefined) {
+        res.status(400).send("A fkUsuario está undefined!");
+    }
+
+
+    livroModel.livroFav(livro, autor, genero, fkUsuario).then(function(resposta){
+        res.status(200).send("Dados inserido com sucesso");
+    }).catch(function(erro){
+        res.status(500).json(erro.sqlMessage);
+    })
+}
+
+function mostrarLivroFav(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    livroModel.mostrarLivroFav(idUsuario).then((resposta) => {
+        res.status(200).json(resposta);
+    });
+}
+
+function mostrarAutorFav(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    livroModel.mostrarAutorFav(idUsuario).then((resposta) => {
+        res.status(200).json(resposta);
+    });
+
+}
 
 module.exports = {
     registrarLivro,
@@ -133,5 +176,8 @@ module.exports = {
     buscarLivro,
     ultimoLivro,
     ultimaData,
-    relembrarLeituras
+    relembrarLeituras,
+    livroFav,
+    mostrarLivroFav,
+    mostrarAutorFav
 }

@@ -25,15 +25,16 @@ function listarLivro() {
                     qtdTotal.innerHTML = `<b>${qtsLivros}</b>`;
 
                     if (qtsLivros <= 5) {
-                        div_caracteristica.innerHTML = `Você é um <b style="color:  rgba(146, 45, 146, 0.696);">leitor limitado</b>! <br> Precisa de mais foco para ampliar a sua leitura!`;
+                        div_caracteristica.innerHTML = `Você é um <b style="color:  rgba(146, 45, 146, 0.696);">leitor limitado</b>! <br> Precisa de mais foco para ampliar a sua leitura!<br> `;
                     } else if (qtsLivros <= 10) {
                         div_caracteristica.innerHTML = `Você é um <b style="color:  rgb(199, 83, 122);">leitor casual</b>! <br> Está lendo menos livros do que deveria!`;
                     } else if (qtsLivros <= 15) {
-                        div_caracteristica.innerHTML = `Você é um <b style="color:   rgb(216, 140, 152);">leitor consistente</b>! <br> A leitura está no seu cotidiano, mas você pode melhorar!`;
+                        div_caracteristica.innerHTML = `Você é um <b style="color:   rgb(216, 140, 152);">leitor consistente</b>! <br> A leitura está no seu cotidiano, mas você pode melhorar! <br> `;
                     } else if (qtsLivros <= 20) {
-                        div_caracteristica.innerHTML = `Você é um <b style="color:   rgb(216, 140, 152);">leitor dedicado</b>! <br> A leitura está no seu cotidiano, mas você pode melhorar!`;
+                        div_caracteristica.innerHTML = `Você é um <b style="color:    rgb(226, 97, 196);">leitor dedicado</b>! <br> Você está lendo bastante, parabéns! Falta pouco para ser um super leitor!`;
                     } else {
-                        div_caracteristica.innerHTML = `<h2><b>Damon</b></h2> <span class="descricaoPerfil">Seus diários são uma prova do compromisso, tão regulares quanto os de um Stefan que documentava cada detalhe. Continue escrevendo, mostrando sua dedicação à narrativa da sua vida. </span>`;}
+                        div_caracteristica.innerHTML = `PARABÉNS! <br> Você é um <b style="color:    rgba(243, 75, 255, 0.822);">super leitor</b>!<span> Isso é o que esperava de você, eu sabia que você ia chegar até aqui!</span>`;
+                    }
                     // } else { console.log(`Erro ao capturar perfil... valor da variavel ${qtsLivros}`) }
                 })
         })
@@ -105,7 +106,7 @@ function buscarLivro() {
         });
 }
 
-function ultimoLivro(){
+function ultimoLivro() {
     fetch(`/livro/ultimoLivro/${idUsuario}`, {
         method: 'GET',
         headers: {
@@ -115,16 +116,74 @@ function ultimoLivro(){
         .then(function (resposta) {
             resposta.json().then((resposta) => {
                 resposta.forEach((resposta) => {
-                    if(resposta.nomeLivro){
-                       div_livro_lendo.innerHTML = `${resposta.nomeLivro}`;
+                    if (resposta.nomeLivro) {
+                        div_livro_lendo.innerHTML = `${resposta.nomeLivro}`;
                     }
                 });
             });
         });
+}
+
+function ultimaData() {
+    fetch(`/livro/ultimaData/${idUsuario}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then(function (resposta) {
+            resposta.json().then((resposta) => {
+                resposta.forEach((resposta) => {
+                    if (resposta.dtInicio) {
+                        div_data_lendo.innerHTML = new Date(resposta.dtInicio).toLocaleDateString();
+                    }
+                });
+            });
+        });
+}
+
+function relembrarLeituras() {
+    div_relembrar.innerHTML = ``;
+    var contador = 0;
+    fetch(`/livro/relembrarLeituras/${idUsuario}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then(function (resposta) {
+            resposta.json().then((resposta) => {
+                resposta.forEach((resposta) => {
+                    if (resposta.nomeLivro && resposta.autor) {
+                        contador++;
+                        div_relembrar.innerHTML += `<br><b style="color:  darkorchid;" >Livro ${contador} - </b>${resposta.nomeLivro} - ${resposta.autor}<br>`;
+                    }
+                });
+            });
+        });
+}
+
+function mostrarLivroFav() {
+    fetch(`/livro/mostrarLivroFav/${idUsuario}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then(function (resposta) {
+            resposta.json().then((resposta) => {
+                resposta.forEach((resposta) => {
+                    if (resposta.livro) {
+                        div_livro_fav.innerHTML = `${resposta.livro}`;
+                    }
+                });
+            });
+        });
+
     }
 
-    function ultimaData(){
-        fetch(`/livro/ultimaData/${idUsuario}`, {
+    function mostrarAutorFav() {
+        fetch(`/livro/mostrarAutorFav/${idUsuario}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -133,94 +192,40 @@ function ultimoLivro(){
             .then(function (resposta) {
                 resposta.json().then((resposta) => {
                     resposta.forEach((resposta) => {
-                        if(resposta.dtInicio){
-                           div_data_lendo.innerHTML = new Date(resposta.dtInicio).toLocaleDateString();
+                        if (resposta.autor) {
+                            div_autor_fav.innerHTML = `${resposta.autor}`;
                         }
                     });
                 });
             });
+    
         }
 
-        function relembrarLeituras(){
-            div_relembrar.innerHTML = ``;
-            var contador = 0;
-            fetch(`/livro/relembrarLeituras/${idUsuario}`, {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            })
-                .then(function (resposta) {
-                    resposta.json().then((resposta) => {
-                        resposta.forEach((resposta) => {
-                            if (resposta.nomeLivro && resposta.autor) {
-                                contador++;
-                                div_relembrar.innerHTML += `<br><b>Livro ${contador} - </b>${resposta.nomeLivro} - ${resposta.autor}<br>`;
-                            }
-                        });
-                    });
-                });
-        }
-    
 
 window.onload = function () {
     listarLivro();
     buscarLivro();
     ultimoLivro();
     ultimaData();
+    mostrarLivroFav();
+    mostrarAutorFav();
 };
 
+// const labels = [
+//     '2018',
+//     '2019',
+//     '2020',
+//     '2021',
+//     '2022',
+//     '2023',
 
-
-// const labels2 = [
-//     'Romance', 
-//     'Ficção',
-//     'Ação',
-//     'Poesia',
 // ];
 
-// const data2 = {
-//     labels: labels2,
-//     datasets: [
-//     {
-//         label: 'Gêneros lidos',
-//         backgroundColor: ['plum'],
-//         borderColor: ['rgb(198,35,104) '],
-//         data: [15, 5, 20, 10, 8, 1],
-//     }
-//     ]
-// };
-
-
-// const config2 = {
-//     type: 'bar',
-//     data: data2,
-//     options: {}
-// };
-
-// const myChart2 = new Chart(
-//     document.getElementById('myChart2'),
-//     config2
-// );
-
-
-
-
-const labels = [
-    '2018',
-    '2019',
-    '2020',
-    '2021',
-    '2022',
-    '2023',
-
-];
-
 const labels3 = [
-    'Romance',
-    'Ficção',
-    'Ação',
-    'Poesia'
+    'Janeiro',
+    'Fevereiro',
+    'Julho',
+    'Novembro'
 ];
 
 const data3 = {
@@ -230,7 +235,7 @@ const data3 = {
             backgroundColor: ['rgba(146, 45, 146, 0.696)', 'rgb(199, 83, 122)', 'rgb(216, 140, 152)', 'rgb(226, 97, 196)'],
             borderColor: 'black', // Adicionando uma borda branca para separar as fatias
             borderWidth: 3, // Espessura da borda
-            data: [20, 10, 50, 20],
+            data: [20, 15, 50, 15],
         }
     ]
 };

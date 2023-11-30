@@ -320,6 +320,7 @@ h2 {
 }
 
 .caracteristica {
+    margin-top: 10%;
     border: solid 5px teal;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;

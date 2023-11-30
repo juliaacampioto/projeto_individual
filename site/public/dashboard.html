@@ -30,16 +30,19 @@
         <div id="div_mostrar" class="mostrar">
             <div class="mostrar_dentro">
                 <button class="x" id="fechar">X</button>
-                <div class="inserir"> <div class="inserir_livro"> <b class="pergunta_principal"> Começou a ler um livro? </b> <br> <br>Nome do livro: <input class="input_livros" type="text"
-                        id="id_nome_do_livro"> <br> <br> Gênero: <select name="" id="select_genero">
-                        <option value="romance">Romance</option>
-                        <option value="ficcao">Ficção</option>
-                        <option value="acao">Ação</option>
-                        <option value="poesia">Poesia</option>
-                    </select>
-                    <br> <br> Autor(a): <input class="input_livros" type="text" id="input_autor">
-                    <br> <br> Data de início: <input class="input_livros" type="text" id="input_data_inicio"> <br> <br> <div class="botao_registrar"> <button
-                        onclick="registrarLivro()">Registrar livro</button></div>
+                <div class="inserir">
+                    <div class="inserir_livro"> <b class="pergunta_principal"> Começou a ler um livro? </b> <br>
+                        <br>Nome do livro: <input class="input_livros" type="text" id="id_nome_do_livro"> <br> <br>
+                        Gênero: <select name="" id="select_genero">
+                            <option value="romance">Romance</option>
+                            <option value="ficcao">Ficção</option>
+                            <option value="acao">Ação</option>
+                            <option value="poesia">Poesia</option>
+                        </select>
+                        <br> <br> Autor(a): <input class="input_livros" type="text" id="input_autor">
+                        <br> <br> Data de início: <input class="input_livros" type="text" id="input_data_inicio"> <br>
+                        <br>
+                        <div class="botao_registrar"> <button onclick="registrarLivro()">Registrar livro</button></div>
                     </div>
                 </div>
             </div>
@@ -51,16 +54,20 @@
         <div id="div_mostrar2" class="mostrar">
             <div class="mostrar_dentro">
                 <button class="x" id="fechar2">X</button>
-                <div class="inserir"> <div class="inserir_livro"> <b class="pergunta_principal2"> Suas preferências </b> <br> <br>Qual seu livro preferido?  <input class="input_livros2" type="text"
-                        id="id_livro_fav"> <br> <br> Qual seu gênero preferido? <select name="" id="select_genero_fav">
-                        <option value="romance">Romance</option>
-                        <option value="ficcao">Ficção</option>
-                        <option value="acao">Ação</option>
-                        <option value="poesia">Poesia</option>
-                    </select>
-                    <br> <br> Qual seu autor preferido? <input class="input_livros2" type="text" id="input_autor_fav">
-                    <br> <br> <div class="botao_registrar"> <button
-                        onclick="registrarPreferencia()">Registrar preferências</button></div>
+                <div class="inserir">
+                    <div class="inserir_livro"> <b class="pergunta_principal2"> Suas preferências </b> <br> <br>Qual seu
+                        livro preferido? <input class="input_livros2" type="text" id="id_livro_fav"> <br> <br> Qual seu
+                        gênero preferido? <select name="" id="select_genero_fav">
+                            <option value="romance">Romance</option>
+                            <option value="ficcao">Ficção</option>
+                            <option value="acao">Ação</option>
+                            <option value="poesia">Poesia</option>
+                        </select>
+                        <br> <br> Qual seu autor preferido? <input class="input_livros2" type="text"
+                            id="input_autor_fav">
+                        <br> <br>
+                        <div class="botao_registrar"> <button onclick="livroFav()">Registrar
+                                preferências</button></div>
                     </div>
                 </div>
             </div>
@@ -71,32 +78,67 @@
         <div class="container_dash">
             <h1 id="titulo"></h1> <br> <br>
 
+
+            <div class="tudo_metrica">
+                <div class="classificacao">
+                    <div class="classificacao_metrica3">
+                        <b>Seu livro favorito</b>
+                    </div>
+                    <div class="classificacao_metrica3">
+                        <b>Seu autor favorito</b>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="tudo_metrica">
+                <div class="classificacao">
+                    <div id="div_livro_fav" class="classificacao_metrica3">
+
+                    </div>
+                    <div id="div_autor_fav" class="classificacao_metrica3">
+
+                    </div>
+
+                </div>
+            </div>
+
+            <br> <br> <br>
+
             <div class="tudo_metrica">
                 <div class="classificacao">
                     <div class="classificacao_metrica">
                         <b>Livro que você está lendo</b>
                     </div>
                     <div class="classificacao_metrica">
-                        <b> Data de início da leitura </b>
+                        <b>Data de início da leitura</b>
                     </div>
+
                 </div>
+
+
             </div>
             <div class="tudo_metrica">
                 <div class="classificacao">
                     <div id="div_livro_lendo" class="classificacao_metrica3">
-                    
+
                     </div>
                     <div id="div_data_lendo" class="classificacao_metrica3">
-                        
+
                     </div>
+
                 </div>
             </div>
             <div class="relembrar">
-                <button onclick="relembrarLeituras()">Relembrar leituras</button> 
-            </div> 
+                <button onclick="relembrarLeituras()">Relembrar leituras</button>
+            </div>
             <div id="div_relembrar" class="relembrar2"></div>
+
+
             <br> <br>
-            
+
+
             <h2>Métricas</h2> <br>
             <div class="tudo_metrica">
                 <div class="classificacao">
@@ -160,19 +202,8 @@
             <h2>Quantidade de livros lidos por você</h2><br>
             <div class="kpi">
                 <div class="kpis">
-                    <div class="tabela_kpis">
-                        <div class="imagem_placa">
-                            <div class="kpi_texto">Gênero mais lido</div>
-                            <div class="kpi_texto">Gênero menos lido</div>
-                        </div>
-                    </div>
-                    <div class="tabela_kpis2">
-                        <div class="imagem_placa">
-                            <div class="kpi_texto">sjs</div>
-                            <div class="kpi_texto">mss</div>
-                        </div>
-                    </div> <br>
-                    <div id="div_caracteristica" class="caracteristica"> 
+                   
+                    <div id="div_caracteristica" class="caracteristica">
                         <div id="div_classificacao" class="div_classificacao"></div>
                         Você é sksl ! Mudar a cor também
                     </div>
@@ -186,78 +217,23 @@
         </div>
 
 
-
         <br> <br>
-        <!-- <h2>Métricas</h2> <br>
-            <div class="tudo_metrica">
-                <div class="classificacao">
-                    <div class="classificacao_metrica"><b>
-                            Desempenho do leitor</b>
-                    </div>
-                    <div class="classificacao_metrica_muito_ruim">
-                        <div class="colocar_baixo">
-                            Muito ruim
-                        </div>
-                    </div>
-                    <div class="classificacao_metrica_ruim">
-                        <div class="colocar_baixo">
-                            Ruim </div>
-                    </div>
-                    <div class="classificacao_metrica_mediano">
-                        <div class="colocar_baixo">
-                            Mediano</div>
-                    </div>
-                    <div class="classificacao_metrica_bom">
-                        <div class="colocar_baixo">
-                            Bom</div>
-                    </div>
-                    <div class="classificacao_metrica_muito_bom">
-                        <div class="colocar_baixo">
-                            Muito bom</div>
-                    </div>
-                </div>
-                <div class="classificacao2">
-                    <div class="classificacao_metrica2"><b>
-                            Livros lidos anualmente</b>
-                    </div>
-                    <div class="classificacao_metrica_muito_ruim">
-                        <div class="colocar_baixo">
-                            Até 5 </div>
-                    </div>
-                    <div class="classificacao_metrica_ruim">
-                        <div class="colocar_baixo">
-                            Entre 6 - 10</div>
-                    </div>
-                    <div class="classificacao_metrica_mediano">
-                        <div class="colocar_baixo">
-                            Entre 11 - 15 </div>
-                    </div>
-                    <div class="classificacao_metrica_bom">
-                        <div class="colocar_baixo">
-                            Entre 16 - 20</div>
-                    </div>
-                    <div class="classificacao_metrica_muito_bom">
-                        <div class="colocar_baixo">
-                            Acima de 20 </div>
-                    </div>
-                </div>
-            </div> -->
 
 
         <div class="banner2">
-            <h2>Gêneros mais lidos pelos usuários</h2><br>
+            <h2>Meses mais lidos pelos usuários</h2><br>
             <div class="kpi">
                 <div class="kpis">
                     <div class="tabela_kpis">
                         <div class="imagem_placa">
-                            <div class="kpi_texto">Gênero mais lido</div>
-                            <div class="kpi_texto">Gênero menos lido</div>
+                            <div class="kpi_texto">Mês mais lido</div>
+                            <div class="kpi_texto">Mês menos lido</div>
                         </div>
                     </div>
                     <div class="tabela_kpis2">
                         <div class="imagem_placa">
-                            <div class="kpi_texto">Ação</div>
-                            <div class="kpi_texto">Ficção</div>
+                            <div class="kpi_texto">Julho</div>
+                            <div class="kpi_texto">Novembro</div>
                         </div>
                     </div>
                 </div>
@@ -347,9 +323,63 @@
 
     }
 
+    function livroFav() {
+
+        var livro = id_livro_fav.value;
+        var autor = input_autor_fav.value;
+        var genero = select_genero_fav.value;
+
+        // listaLivros.push(nomeLivro);
+
+        if (
+            livro == "" ||
+            autor == "" ||
+            genero == "" 
+        ) {
+            return false;
+        } else {
+            fetch("/livro/livroFav", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    livroServer: livro,
+                    autorServer: autor,
+                    generoServer: genero,
+                    fkUsuarioServer: idUsuario
+                }),
+            })
+                .then(function (resposta) {
+                    console.log("resposta: ", resposta);
+
+                    if (resposta.ok) {
+                        console.log(resposta);
+
+                        resposta.json().then(json => {
+                            console.log(json);
+                            console.log(JSON.stringify(json));
+                            // sessionStorage.ULTIMO_LIVRO = json.livro;
+                            // sessionStorage.ULTIMO_GENERO = json.livrogenero;
+                            // sessionStorage.ULTIMO_AUTOR = json.livroautor;
+                            // sessionStorage.ULTIMA_DATA = json.livrodtInicio;
+                        });
+
+                    }
+                })
+
+
+                .catch(function (resposta) {
+                    console.log(`#ERRO: ${resposta}`);
+                });
+
+            return false;
+
+        }
+
+
+    }
 
     // div_livro_lendo.innerHTML = nomeLivro;
-
-
 
 </script>
