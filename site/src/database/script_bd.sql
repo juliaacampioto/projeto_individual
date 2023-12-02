@@ -30,5 +30,16 @@ select * from cadastro;
 select * from livro_novo;
 select * from preferencias;	
 
+select count(idLivroNovo) as qtdLivros from livro_novo inner join cadastro on fkUsuario = idUsuario where idUsuario = 1;
+
+select count(idLivroNovo) as qtd, month(dtInicio) as mes from livro_novo
+where fkUsuario = 1 and dtInicio between '2023-01-01' and '2023-12-31' 
+group by mes order by month(dtInicio);
+
+select nomeLivro from livro_novo where fkUsuario = 1 order by idLivroNovo desc limit 1;
+select dtInicio from livro_novo where fkUsuario = 1 order by idLivroNovo desc limit 1;
+
+ select  nomeLivro, autor from livro_novo where fkUsuario = 1;
+
 select livro from preferencias where fkUsuarioPref = 1;	
 select autor from preferencias where fkUsuarioPref = 1;	
