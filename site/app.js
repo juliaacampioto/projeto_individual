@@ -8,7 +8,7 @@ var PORTA = process.env.AMBIENTE_PROCESSO == "desenvolvimento" ? 3333 : 8080;
 var app = express();
 
 var indexRouter = require("./src/routes/index")
-var cadastroRouter = require("./src/routes/cadastro");  
+var cadastroRouter = require("./src/routes/cadastro");
 var loginRouter = require("./src/routes/login");
 var livroRouter = require("./src/routes/livro");
 
@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(cors());
 app.use('/', indexRouter);
 
-app.use("/cadastro", cadastroRouter); 
+app.use("/cadastro", cadastroRouter);
 app.use("/login", loginRouter);
 app.use("/livro", livroRouter);
 

@@ -3,18 +3,11 @@
 }
 
 .tudo {
-    border: solid 5px lawngreen;
     display: flex;
 }
 
-/* .tudo1{
-    border: solid 5px navajowhite;
-    display: flex;
-} */
-
 .container_menu {
     display: flex;
-    border: solid 5px tan;
     width: 14%;
     overflow-y: hidden;
 }
@@ -22,7 +15,6 @@
 .container_menu .menu {
     width: 200px;
     background-color: plum;
-    border: solid 5px firebrick;
     height: 100%
 }
 
@@ -45,29 +37,22 @@
 }
 
 .container_dash {
-    /* flex: 1;
-    padding: 20px;
-    width: 70%; */
-    border: solid 5px firebrick;
     width: 86%;
 
 }
 
 .container_dash h1 {
-    border: solid 5px gainsboro;
     text-align: center;
     margin-top: 10px;
 }
 
 .tudo_metrica {
-    border: solid 5px royalblue;
     margin-left: 50px;
     margin-right: 50px;
 }
 
 .container_dash .classificacao {
     display: flex;
-    border: solid 5px gold;
     justify-content: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
@@ -75,16 +60,11 @@
 }
 
 .container_dash .classificacao2 {
-    border: solid 5px green;
     display: flex;
     text-align: center;
 }
 
 .classificacao_metrica {
-    /* padding-top: 8px;
-    padding-block-end: 8px; */
-    /* align-items: center; */
-    /* display: flex; */
     display: flex;
     align-items: center;
     border: solid 3px black;
@@ -95,9 +75,8 @@
 }
 
 .classificacao_metrica3 {
-     padding-top: 8px;
+    padding-top: 8px;
     padding-block-end: 8px;
-    /* padding-left: 10px; */
     justify-content: center;
     align-items: center;
     display: flex;
@@ -162,8 +141,6 @@
 .classificacao_metrica2 {
     background-color: plum;
     border: solid 3px black;
-    /* padding-block-end: 5px;
-    padding-top: 7px; */
     align-items: center;
     display: flex;
     font-family: 'Courier New', Courier, monospace;
@@ -172,78 +149,52 @@
 }
 
 .colocar_baixo {
-    /* border: solid 5px hotpink; */
     margin-top: 10px;
     margin-block-end: 10px;
 }
 
-/* .muito_ruim{
-    background-color: black;
-    border: solid 5px firebrick;
-} */
-
 h2 {
-    border: solid 5px lawngreen;
     text-align: center;
 }
 
 .banner2 {
-    border: solid 5px darkblue;
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 40px;
 }
 
 .tudo_metrica2 {
-    border: solid 5px royalblue;
-    /* margin-left: 50px;
-    margin-right: 50px; */
     width: 40%;
-    /* margin-left: 55%; */
 }
 
 .kpi {
-    border: solid 5px gray;
     display: flex;
     justify-content: space-evenly;
 }
 
 .imagem_placa {
-    /* border: solid 5px magenta; */
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
     background-color: plum;
     display: flex;
     width: 80%;
-    /* justify-content: center;
-    display: flex; */
-    /* width: 50%;
-    height: 50px; */
-    /* height: 500px; */
-    /* background-repeat: no-repeat;
-    background-size: cover; */
-    /* margin-right: 50%; */
 }
 
 .kpi_texto {
     border: solid 3px black;
     text-align: center;
     width: 50%;
-    /* width: 35%; */
 }
 
 .kpis {
     width: 50%;
-    border: solid 5px tan;
 }
 
 .grafico_pizza {
-    border: solid 5px khaki;
     width: 30%;
 }
 
 .mostrar {
-    /* border: solid 5px hotpink; */
     width: 60%;
     height: 90%;
     position: fixed;
@@ -321,21 +272,18 @@ h2 {
 
 .caracteristica {
     margin-top: 10%;
-    border: solid 5px teal;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
     text-align: center;
 }
 
 .tabela_kpis {
-    border: solid 5px forestgreen;
     display: flex;
     font-weight: bolder;
     justify-content: center;
 }
 
 .tabela_kpis2 {
-    border: solid 5px forestgreen;
     display: flex;
     justify-content: center;
 }
@@ -357,38 +305,28 @@ button {
 }
 
 .grafico_genero {
-    border: solid 5px rebeccapurple;
     width: 30%;
 }
 
 .inserir_livro {
-    border: solid 5px tan;
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
     width: 100%;
-    /* font-weight: bolder; */
 }
 
 .pergunta_principal {
-    border: solid 5px red;
-    /* margin-left: 10px; */
     margin-left: 10%;
     width: 100%;
-    /* display: flex; */
     text-align: center;
 }
 
 .pergunta_principal2 {
-    border: solid 5px red;
-    /* margin-left: 10px; */
     margin-left: 30%;
     width: 100%;
-    /* display: flex; */
     text-align: center;
 }
 
 .botao_registrar {
-    border: solid 5px royalblue;
     display: flex;
     justify-content: center;
 }
@@ -411,26 +349,17 @@ button {
     padding: 5px;
 }
 
-a{
+a {
     text-align: center;
-    border: solid 5px red;
     width: 100%;
 }
 
-/* .relembrar{
-    border: solid 5px magenta;
-} */
-
-.relembrar2{
-    /* border: solid 5px plum; */
+.relembrar2 {
     font-family: 'Courier New', Courier, monospace;
     font-size: 19px;
     text-align: justify;
     padding-left: 10%;
     padding-right: 5%;
-    /* display: flex;
-    justify-content: center; */
-    /* text-align: center; */
     margin-left: 20%;
     margin-right: 22%;
 }

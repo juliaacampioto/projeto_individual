@@ -1,11 +1,11 @@
-.banner_login .container_login2 .campos_login2{
+.banner_login .container_login2 .campos_login2 {
   width: 80%;
   height: 65%;
   margin-left: 10px;
   margin-top: 70px;
 }
 
-.sobrenome{
+.sobrenome {
   border: solid 5px #e5dad8;
   border-radius: 20px;
   width: 17%;
@@ -14,7 +14,7 @@
   font-weight: bolder;
 }
 
-.conf_senha{
+.conf_senha {
   border: solid 5px #e5dad8;
   border-radius: 20px;
   width: 30%;
@@ -23,7 +23,7 @@
   font-weight: bolder;
 }
 
-.input2{
+.input2 {
   border-radius: 20px;
   margin-left: 10px;
   margin-top: 4px;
@@ -44,20 +44,20 @@
 }
 
 .banner_login .container_login2 .campos_login2 .button2:hover {
-  background-color: #b7a89c; 
+  background-color: #b7a89c;
 }
 
 
-.banner_login .container_login2 .campos_login2 .botao2{
+.banner_login .container_login2 .campos_login2 .botao2 {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.erro{
+.erro {
   font-family: 'Courier New', Courier, monospace;
   font-size: 19px;
-  color: red  ;
+  color: red;
   justify-content: center;
   font-weight: bolder;
   display: flex;

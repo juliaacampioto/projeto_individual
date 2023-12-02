@@ -24,9 +24,9 @@ function registrarLivro(req, res) {
     }
 
 
-    livroModel.registrarLivro(nomeLivro, genero, autor, dtInicio, fkUsuario).then(function(resposta){
+    livroModel.registrarLivro(nomeLivro, genero, autor, dtInicio, fkUsuario).then(function (resposta) {
         res.status(200).send("Dados inserido com sucesso");
-    }).catch(function(erro){
+    }).catch(function (erro) {
         res.status(500).json(erro.sqlMessage);
     })
 }
@@ -63,7 +63,7 @@ function buscarLivro(req, res) {
 
     livroModel.buscarLivro(idUsuario)
         .then(
-            function (resultado) {                
+            function (resultado) {
                 if (resultado.length > 0) {
                     res.status(200).json(resultado);
                 } else {
@@ -106,7 +106,7 @@ function relembrarLeituras(req, res) {
 
     livroModel.relembrarLeituras(idUsuario)
         .then(
-            function (resultado) {                
+            function (resultado) {
                 if (resultado.length > 0) {
                     res.status(200).json(resultado);
                 } else {
@@ -146,9 +146,9 @@ function livroFav(req, res) {
     }
 
 
-    livroModel.livroFav(livro, autor, genero, fkUsuario).then(function(resposta){
+    livroModel.livroFav(livro, autor, genero, fkUsuario).then(function (resposta) {
         res.status(200).send("Dados inserido com sucesso");
-    }).catch(function(erro){
+    }).catch(function (erro) {
         res.status(500).json(erro.sqlMessage);
     })
 }

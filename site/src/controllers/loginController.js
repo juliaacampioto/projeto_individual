@@ -13,28 +13,29 @@ function autenticar(req, res) {
             .then(
                 function (resultadoAutenticar) {
                     console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
-                    console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); 
+                    console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`);
                     if (resultadoAutenticar.length == 1) {
                         console.log(resultadoAutenticar);
-                    
+
                         if (resultadoAutenticar.length == 1) {
-                        
+
                             console.log(resultadoAutenticar);
-    
+
                             res.json({
-                                id: resultadoAutenticar[0].id,  
+                                id: resultadoAutenticar[0].id,
                                 email: resultadoAutenticar[0].email,
                                 nome: resultadoAutenticar[0].nome,
                                 senha: resultadoAutenticar[0].senha
-                                                        
+
                             });
-                    
-                    } else if (resultadoAutenticar.length == 0) {
-                        res.status(403).send("Email e/ou senha inválido(s)");
-                    } else {
-                        res.status(403).send("Mais de um usuário com o mesmo login e senha!");
+
+                        } else if (resultadoAutenticar.length == 0) {
+                            res.status(403).send("Email e/ou senha inválido(s)");
+                        } else {
+                            res.status(403).send("Mais de um usuário com o mesmo login e senha!");
+                        }
                     }
-                }}
+                }
             ).catch(
                 function (erro) {
                     console.log(erro);

@@ -94,7 +94,7 @@ function mostrarAutorFav(idUsuario) {
 module.exports = {
     registrarLivro,
     listarLivro,
-    buscarLivro, 
+    buscarLivro,
     ultimoLivro,
     ultimaData,
     relembrarLeituras,

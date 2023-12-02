@@ -3,7 +3,7 @@ function entrar() {
     var emailVar = input_email.value;
     var senhaVar = input_senha.value;
 
-    if(emailVar === '' || senhaVar === '') {
+    if (emailVar === '' || senhaVar === '') {
         div_erro.innerHTML = `Preencha todos os campos!`
     }
 
@@ -48,7 +48,7 @@ function entrar() {
             });
         }
 
-    }).catch(function (erro) {  
+    }).catch(function (erro) {
         console.log(erro);
     })
 

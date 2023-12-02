@@ -13,7 +13,6 @@
 
 <body>
     <div class="tudo">
-        <!-- <div class="tudo1"> -->
         <div class="container_menu">
             <div class="menu">
                 <ul class="menu-list"> <br>
@@ -24,8 +23,6 @@
                 </ul>
             </div>
         </div>
-
-
 
         <div id="div_mostrar" class="mostrar">
             <div class="mostrar_dentro">
@@ -47,9 +44,6 @@
                 </div>
             </div>
         </div>
-
-
-
 
         <div id="div_mostrar2" class="mostrar">
             <div class="mostrar_dentro">
@@ -73,11 +67,8 @@
             </div>
         </div>
 
-
-
         <div class="container_dash">
             <h1 id="titulo"></h1> <br> <br>
-
 
             <div class="tudo_metrica">
                 <div class="classificacao">
@@ -89,7 +80,6 @@
                     </div>
 
                 </div>
-
 
             </div>
             <div class="tudo_metrica">
@@ -117,7 +107,6 @@
 
                 </div>
 
-
             </div>
             <div class="tudo_metrica">
                 <div class="classificacao">
@@ -134,11 +123,7 @@
                 <button onclick="relembrarLeituras()">Relembrar leituras</button>
             </div>
             <div id="div_relembrar" class="relembrar2"></div>
-
-
             <br> <br>
-
-
             <h2>Métricas</h2> <br>
             <div class="tudo_metrica">
                 <div class="classificacao">
@@ -195,14 +180,11 @@
                 </div>
             </div>
         </div>
-
-
-
         <div class="banner2">
             <h2>Quantidade de livros lidos por você</h2><br>
             <div class="kpi">
                 <div class="kpis">
-                   
+
                     <div id="div_caracteristica" class="caracteristica">
                         <div id="div_classificacao" class="div_classificacao"></div>
                         Você é sksl ! Mudar a cor também
@@ -215,11 +197,7 @@
                 </div>
             </div>
         </div>
-
-
         <br> <br>
-
-
         <div class="banner2">
             <h2>Meses mais lidos pelos usuários</h2><br>
             <div class="kpi">
@@ -243,13 +221,10 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
     </div>
     </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </div>
     </div>
@@ -261,7 +236,6 @@
 
 <script>
     var idUsuario = sessionStorage.ID_USUARIO;
-    // var listaLivros = [];
 
     function registrarLivro() {
 
@@ -269,8 +243,6 @@
         var genero = select_genero.value;
         var autor = input_autor.value;
         var dtInicio = input_data_inicio.value;
-
-        // listaLivros.push(nomeLivro);
 
         if (
             nomeLivro == "" ||
@@ -302,25 +274,18 @@
                         resposta.json().then(json => {
                             console.log(json);
                             console.log(JSON.stringify(json));
-                            // sessionStorage.ULTIMO_LIVRO = json.livro;
-                            // sessionStorage.ULTIMO_GENERO = json.livrogenero;
-                            // sessionStorage.ULTIMO_AUTOR = json.livroautor;
-                            // sessionStorage.ULTIMA_DATA = json.livrodtInicio;
+
                         });
 
                     }
                 })
-
 
                 .catch(function (resposta) {
                     console.log(`#ERRO: ${resposta}`);
                 });
 
             return false;
-
         }
-
-
     }
 
     function livroFav() {
@@ -329,12 +294,10 @@
         var autor = input_autor_fav.value;
         var genero = select_genero_fav.value;
 
-        // listaLivros.push(nomeLivro);
-
         if (
             livro == "" ||
             autor == "" ||
-            genero == "" 
+            genero == ""
         ) {
             return false;
         } else {
@@ -359,27 +322,16 @@
                         resposta.json().then(json => {
                             console.log(json);
                             console.log(JSON.stringify(json));
-                            // sessionStorage.ULTIMO_LIVRO = json.livro;
-                            // sessionStorage.ULTIMO_GENERO = json.livrogenero;
-                            // sessionStorage.ULTIMO_AUTOR = json.livroautor;
-                            // sessionStorage.ULTIMA_DATA = json.livrodtInicio;
                         });
 
                     }
                 })
-
-
                 .catch(function (resposta) {
                     console.log(`#ERRO: ${resposta}`);
                 });
 
             return false;
-
         }
 
-
     }
-
-    // div_livro_lendo.innerHTML = nomeLivro;
-
 </script>

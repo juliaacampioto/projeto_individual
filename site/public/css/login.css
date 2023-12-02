@@ -76,8 +76,8 @@ input:focus {
     padding-top: 4px;
     padding-block-end: 4px;
     transition: background-color 0.3s;
-  }
-  
-   .button:hover {
-    background-color: #b7a89c; 
-  }
+}
+
+.button:hover {
+    background-color: #b7a89c;
+}

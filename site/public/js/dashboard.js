@@ -1,5 +1,4 @@
 var nome = sessionStorage.NOME_USUARIO;
-// var ultimoLivro = sessionStorage.ULTIMO_LIVRO;
 
 titulo.innerHTML = `Olá, ${nome}! <br> Aqui está a sua dashboard:`;
 
@@ -35,7 +34,7 @@ function listarLivro() {
                     } else {
                         div_caracteristica.innerHTML = `PARABÉNS! <br> Você é um <b style="color:    rgba(243, 75, 255, 0.822);">super leitor</b>!<span> Isso é o que esperava de você, eu sabia que você ia chegar até aqui!</span>`;
                     }
-                    // } else { console.log(`Erro ao capturar perfil... valor da variavel ${qtsLivros}`) }
+
                 })
         })
 
@@ -59,10 +58,9 @@ function buscarLivro() {
             if (!response.ok) {
                 throw new Error('Erro ao buscar os dados');
             }
-            return response.json(); // Esta linha é essencial para extrair o corpo da resposta
+            return response.json();
         })
         .then(data => {
-            // Ao utilizar then(data => { ... }), você está basicamente dizendo: "Quando os dados forem recebidos com sucesso do servidor, execute esta função e utilize esses dados dentro deste bloco de código." 
             const ctx = document.getElementById('myChart');
 
             const livros = [
@@ -73,7 +71,6 @@ function buscarLivro() {
 
             const labels = data.map(item => livros[item.mes - 1]);
             const dados = data.map(item => item.qtd);
-            // console.log(dados)
 
             console.log(labels, dados)
 
@@ -180,26 +177,26 @@ function mostrarLivroFav() {
             });
         });
 
-    }
+}
 
-    function mostrarAutorFav() {
-        fetch(`/livro/mostrarAutorFav/${idUsuario}`, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        })
-            .then(function (resposta) {
-                resposta.json().then((resposta) => {
-                    resposta.forEach((resposta) => {
-                        if (resposta.autor) {
-                            div_autor_fav.innerHTML = `${resposta.autor}`;
-                        }
-                    });
+function mostrarAutorFav() {
+    fetch(`/livro/mostrarAutorFav/${idUsuario}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+        .then(function (resposta) {
+            resposta.json().then((resposta) => {
+                resposta.forEach((resposta) => {
+                    if (resposta.autor) {
+                        div_autor_fav.innerHTML = `${resposta.autor}`;
+                    }
                 });
             });
-    
-        }
+        });
+
+}
 
 
 window.onload = function () {
@@ -210,16 +207,6 @@ window.onload = function () {
     mostrarLivroFav();
     mostrarAutorFav();
 };
-
-// const labels = [
-//     '2018',
-//     '2019',
-//     '2020',
-//     '2021',
-//     '2022',
-//     '2023',
-
-// ];
 
 const labels3 = [
     'Janeiro',
@@ -233,8 +220,8 @@ const data3 = {
     datasets: [
         {
             backgroundColor: ['rgba(146, 45, 146, 0.696)', 'rgb(199, 83, 122)', 'rgb(216, 140, 152)', 'rgb(226, 97, 196)'],
-            borderColor: 'black', // Adicionando uma borda branca para separar as fatias
-            borderWidth: 3, // Espessura da borda
+            borderColor: 'black',
+            borderWidth: 3,
             data: [20, 15, 50, 15],
         }
     ]

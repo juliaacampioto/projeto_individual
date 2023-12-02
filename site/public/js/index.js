@@ -1,3 +1,7 @@
+var listaLivrosLidos = [];
+var livrosLidos = ``;
+var contaSubtracao = 0;
+
 function abrirModal() {
     const modal = document.getElementById('div_livro_detalhado')
     modal.classList.add('abrir')
@@ -216,4 +220,18 @@ function abrirModal20() {
             modal.classList.remove('abrir')
         }
     })
+}
+
+function registrarLivrosLidos() {
+    livrosLidos = input_nomeLivrosLidos.value;
+    listaLivrosLidos.push(livrosLidos);
+}
+
+function mostrarLivrosLidos() {
+    contaSubtracao = 20 - listaLivrosLidos.length;
+    div_listaLivros.innerHTML = ``;
+    for (var contador = 0; contador < listaLivrosLidos.length; contador++) {
+        div_listaLivros.innerHTML += `<b> Livro ${contador + 1}: </b> ${listaLivrosLidos[contador]}<br>`;
+    }
+    div_listaLivros.innerHTML += `<br> <b>Quantidade lida por você:</b> ${listaLivrosLidos.length} <br> <b>Quantidade faltando:</b> ${contaSubtracao}`;
 }
